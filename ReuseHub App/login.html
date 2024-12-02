@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register - ReuseHub</title>
+    <style>
+        body {
+            background-image: url('Photo/1.png'); 
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #dfffd6;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 30%; /* Scales based on the viewport width */
+            max-width: 300px; /* Limits the size on larger screens */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+            padding: 30px; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            background-color: rgba(102, 255, 102, 0.9); /* Light green background */
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tabs button.active {
+            background-color: rgba(76, 175, 80, 0.95);
+        }
+
+        form {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form.active {
+            display: flex;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Apply the animation class to all buttons */
+        button[type="submit"] {
+            padding: 10px;
+            background-color: rgba(102, 255, 102, 0.9); /* Light green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgba(76, 175, 80, 0.95);
+        }
+
+        /* Button animation class */
+        .btn-13 {
+            background-color: #a8e9a1; /* Lighter green */
+            background-image: linear-gradient(315deg, #a8e9a1 0%, #6bcf6b 74%);
+            border: none;
+            z-index: 1;
+            position: relative;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .btn-13:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 5px;
+            background-color: #6bcf6b;
+            background-image: linear-gradient(315deg, #6bcf6b 0%, #8de88d 74%);
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+            transition: all 0.3s ease;
+        }
+
+        .btn-13:hover {
+            color: #fff;
+        }
+
+        .btn-13:hover:after {
+            top: 0;
+            height: 100%;
+        }
+
+        .btn-13:active {
+            top: 2px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0); 
+            padding: 10px;
+            font-size: 0.8rem;
+            color: #666;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Single logo image here -->
+        <div class="logo">
+            <img src="Photo/2.png" alt="ReuseHub Logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div class="tabs">
+                <button id="loginTab" class="active btn-13" onclick="switchTab('loginForm')">Login</button>
+                <button id="registerTab" class="btn-13" onclick="switchTab('registerForm')">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="active">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <!-- Apply the animation class to the button -->
+                <button type="submit" class="btn-13">Login</button>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="registerForm">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <!-- Apply the animation class to the button -->
+                <button type="submit" class="btn-13">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ReuseHub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Logged in successfully!');
+                window.location.href = 'index.html';
+            });
+
+            document.getElementById('registerForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Registration successful!');
+                window.location.href = 'login.html';
+            });
+
+            // Switch tabs for login and register forms
+            window.switchTab = function(formId) {
+                document.querySelectorAll('form').forEach(form => {
+                    form.classList.remove('active');
+                });
+                document.querySelectorAll('.tabs button').forEach(button => {
+                    button.classList.remove('active');
+                });
+                document.getElementById(formId).classList.add('active');
+                if (formId === 'loginForm') {
+                    document.getElementById('loginTab').classList.add('active');
+                } else {
+                    document.getElementById('registerTab').classList.add('active');
+                }
+                document.getElementById('registerForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Registration successful!');
+                window.location.href = 'index.html'; // Redirect to index.html after registration
+                });
+            }
+        });
+    </script>
+</body>
+</html>
