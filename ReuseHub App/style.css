@@ -261,10 +261,12 @@ header .logo {
 }
 
 .feature-card .icon img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 5px;
+  width: 120px; 
+  height: 130px; 
+  object-fit: contain; 
+  margin-bottom: 1px;
 }
+
 
 /* Main Content Row */
 .main-content-row {
