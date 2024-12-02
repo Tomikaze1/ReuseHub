@@ -168,7 +168,6 @@ header {
   justify-content: center;
   align-items: center;
   color: rgb(0, 0, 0);
-  padding:px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -191,8 +190,8 @@ header .logo {
   background-image: url("Photo/2.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   margin-bottom: 10px;
 }
 
