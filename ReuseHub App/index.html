@@ -25,86 +25,37 @@
 
     <main>
         <div class="main-content-row">
-            <a href="#diy-tutorials" class="feature-card">
+            <a href="diy-tutorials.html" class="feature-card">
                 <div class="icon">
                     <img src="photo/3.png" alt="DIY Tutorials Logo" />
                 </div>
                 <p>DIY Tutorials</p>
             </a>
-            <a href="#local-makers" class="feature-card">
+            <a href="local-makers.html" class="feature-card">
                 <div class="icon">
                     <img src="photo/4.png" alt="Local Makers Logo" />
                 </div>
                 <p>Local Makers</p>
             </a>
-            <a href="#materials-marketplace" class="feature-card">
+            <a href="materials-marketplace.html" class="feature-card">
                 <div class="icon">
                     <img src="photo/5.png" alt="Marketplace Logo" />
                 </div>
                 <p>Marketplace</p>
             </a>
-            <a href="#project-gallery" class="feature-card">
+            <a href="project-gallery.html" class="feature-card">
                 <div class="icon">
                     <img src="photo/6.png" alt="Project Gallery Logo" />
                 </div>
                 <p>Project Gallery</p>
             </a>
-            <a href="#sustainability-score" class="feature-card">
+            <a href="sustainability-score.html" class="feature-card">
                 <div class="icon">
                     <img src="photo/7.png" alt="Sustainability Score Logo" />
                 </div>
                 <p>Sustainability Score</p>
             </a>
-        </div>
-
-        <!-- Sections -->
-        <section id="dashboard" class="feature-section">
-            <h2>My Dashboard</h2>
-            <div class="dashboard-content">
-                <div class="dashboard-card">
-                    <h3>Saved Projects</h3>
-                    <p>You haven't saved any projects yet.</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Materials List</h3>
-                    <p>Your materials list is empty.</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Sustainability Score</h3>
-                    <p>Your current score: 75%</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="community" class="feature-section">
-            <h2>Community Forum</h2>
-            <div class="forum-container">
-                <div class="post">
-                    <h3>How to upcycle old jeans?</h3>
-                    <p>Posted by User123</p>
-                </div>
-                <div class="post">
-                    <h3>Looking for local makers in my area</h3>
-                    <p>Posted by MakerFan</p>
-                </div>
-                <form>
-                    <textarea placeholder="Post your question or idea..." required></textarea>
-                    <button type="submit">Post</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="gamification" class="feature-section">
-            <h2>Earn Badges!</h2>
-            <div class="badge-container">
-                <div class="badge">
-                    <img src="photo/badge1.png" alt="First Tutorial Completed Badge">
-                    <p>First Tutorial Completed</p>
-                </div>
-                <div class="badge">
-                    <img src="photo/badge2.png" alt="Shared First Project Badge">
-                    <p>Shared First Project</p>
-                </div>
+              </div>
             </div>
         </section>
 
@@ -123,118 +74,7 @@
             <p>Information about ReuseHub.</p>
         </section>
 
-        <section id="diy-tutorials" class="feature-section">
-            <div class="search-container">
-                <input type="text" id="search-bar" placeholder="Search for tutorials..." />
-            </div>
-            <div id="video-container">
-                <div class="video-item" data-title="Video 1">
-                    <video controls>
-                        <source src="path/to/video1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p>Video 1</p>
-                </div>
-                <div class="video-item" data-title="Video 2">
-                    <video controls>
-                        <source src="path/to/video2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p>Video 2</p>
-                </div>
-        </section>
-
-        <section id="local-makers" class="feature-section">
-                <div class="maker">
-                    <h3>John Doe</h3>
-                    <p>Expert in woodworking and furniture upcycling.</p>
-                    <button onclick="contactMaker('John Doe')">Ask for Tips</button>
-                </div>
-                <div class="maker">
-                    <h3>Jane Smith</h3>
-                    <p>Specialist in textile crafts and fabric reuse.</p>
-                    <button onclick="contactMaker('Jane Smith')">Ask for Tips</button>
-                </div>
-                <div class="maker">
-                    <h3>Alex Lee</h3>
-                    <p>Focuses on metal crafting and repurposing scrap metals.</p>
-                    <button onclick="contactMaker('Alex Lee')">Ask for Tips</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="materials-marketplace" class="feature-section">
-            <h2>Materials Marketplace</h2>
-            <p>Buy or sell sustainable materials easily.</p>
-            
-            <div id="marketplace-content" class="marketplace-grid">
-                <!-- Example Item 1 -->
-                <div class="marketplace-item">
-                    <img src="photo/sample1.jpg" alt="Sample Material 1" />
-                    <h3>Sample Material 1</h3>
-                    <p>$10.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button">Sell Similar</button>
-                </div>
-                <!-- Example Item 2 -->
-                <div class="marketplace-item">
-                    <img src="photo/sample2.jpg" alt="Sample Material 2" />
-                    <h3>Sample Material 2</h3>
-                    <p>$8.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button">Sell Similar</button>
-                </div>
-                <!-- Repeat as needed for other items -->
-            </div>
-            
-            <!-- Sell Item Form -->
-            <div id="sell-item-form" class="hidden">
-                <h3>Sell Your Item</h3>
-                <form action="/submit-item" method="post" enctype="multipart/form-data">
-                    <label for="item-name">Item Name:</label>
-                    <input type="text" id="item-name" name="item-name" required />
-        
-                    <label for="item-price">Price ($):</label>
-                    <input type="number" id="item-price" name="item-price" step="0.01" required />
-        
-                    <label for="item-photo">Upload Photo:</label>
-                    <input type="file" id="item-photo" name="item-photo" accept="image/*" required />
-        
-                    <label for="item-description">Description:</label>
-                    <textarea id="item-description" name="item-description" rows="4" required></textarea>
-        
-                    <button type="submit">Submit Item</button>
-                </form>
-            </div>
-        </section>
-        
-        <section id="project-gallery" class="feature-section">
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="photo/project1.jpg" alt="Recycled Project 1" />
-                    <div class="gallery-item-info">
-                        <p>Upcycled Chair</p>
-                        <button class="like-button" onclick="toggleLike(this)">
-                            ❤️ <span class="like-count">0</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo/project2.jpg" alt="Recycled Project 2" />
-                    <div class="gallery-item-info">
-                        <p>Repurposed Lamp</p>
-                        <button class="like-button" onclick="toggleLike(this)">
-                            ❤️ <span class="like-count">0</span>
-                        </button>
-                    </div>
-        </section>
-
-        <section id="sustainability-score" class="feature-section">
-            <h2>Sustainability Score</h2>
-            <p>Track your sustainability impact with our unique score system.</p>
-        </section>
-    </main>
-
+      
     <footer>
         <p>&copy; 2024 ReuseHub. All rights reserved.</p>
     </footer>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Back to Home</a>
+    </header>
+    <main>
+        <h2>DIY Tutorials</h2>
+        <section id="diy-tutorials" class="feature-section">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search for tutorials..." />
+            </div>
+            <div id="video-container">
+                <div class="video-item" data-title="Video 1">
+                    <video controls>
+                        <source src="path/to/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Video 1</p>
+                </div>
+                <div class="video-item" data-title="Video 2">
+                    <video controls>
+                        <source src="path/to/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Video 2</p>
+                </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+
+<!-- <section id="materials-marketplace" class="feature-section">
+    <h2>Materials Marketplace</h2>
+    <p>Buy or sell sustainable materials easily.</p>
+    
+    <div id="marketplace-content" class="marketplace-grid">
+        <!-- Example Item 1 -
+        <div class="marketplace-item">
+            <img src="photo/sample1.jpg" alt="Sample Material 1" />
+            <h3>Sample Material 1</h3>
+            <p>$10.00</p>
+            <button class="buy-button">Buy Now</button>
+            <button class="sell-button">Sell Similar</button>
+        </div>
+        <!-- Example Item 2 -
+        <div class="marketplace-item">
+            <img src="photo/sample2.jpg" alt="Sample Material 2" />
+            <h3>Sample Material 2</h3>
+            <p>$8.00</p>
+            <button class="buy-button">Buy Now</button>
+            <button class="sell-button">Sell Similar</button>
+        </div>
+        <!-- Repeat as needed for other items -
+    </div>
+    
+    <!-- Sell Item Form --
+    <div id="sell-item-form" class="hidden">
+        <h3>Sell Your Item</h3>
+        <form action="/submit-item" method="post" enctype="multipart/form-data">
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" required />
+
+            <label for="item-price">Price ($):</label>
+            <input type="number" id="item-price" name="item-price" step="0.01" required />
+
+            <label for="item-photo">Upload Photo:</label>
+            <input type="file" id="item-photo" name="item-photo" accept="image/*" required />
+
+            <label for="item-description">Description:</label>
+            <textarea id="item-description" name="item-description" rows="4" required></textarea>
+
+            <button type="submit">Submit Item</button>
+        </form>
+    </div>
+</section>
+
+<section id="project-gallery" class="feature-section">
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="photo/project1.jpg" alt="Recycled Project 1" />
+            <div class="gallery-item-info">
+                <p>Upcycled Chair</p>
+                <button class="like-button" onclick="toggleLike(this)">
+                    ❤️ <span class="like-count">0</span>
+                </button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo/project2.jpg" alt="Recycled Project 2" />
+            <div class="gallery-item-info">
+                <p>Repurposed Lamp</p>
+                <button class="like-button" onclick="toggleLike(this)">
+                    ❤️ <span class="like-count">0</span>
+                </button>
+            </div>
+</section>
+
+<section id="sustainability-score" class="feature-section">
+    <h2>Sustainability Score</h2>
+    <p>Track your sustainability impact with our unique score system.</p>
+</section>
+</main>
