@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Back to Home</a>
+    </header>
+    <main>
+        <section id="materials-marketplace" class="feature-section">
+            <h2>Materials Marketplace</h2>
+            <p>Buy or sell sustainable materials easily.</p>
+            
+            <div id="marketplace-content" class="marketplace-grid">
+                Example Item 1 -
+                <div class="marketplace-item">
+                    <img src="photo/sample1.jpg" alt="Sample Material 1" />
+                    <h3>Sample Material 1</h3>
+                    <p>$10.00</p>
+                    <button class="buy-button">Buy Now</button>
+                    <button class="sell-button">Sell Similar</button>
+                </div>
+                 Example Item 2 -
+                <div class="marketplace-item">
+                    <img src="photo/sample2.jpg" alt="Sample Material 2" />
+                    <h3>Sample Material 2</h3>
+                    <p>$8.00</p>
+                    <button class="buy-button">Buy Now</button>
+                    <button class="sell-button">Sell Similar</button>
+                </div>
+            </div>
+            
+            <div id="sell-item-form" class="hidden">
+                <h3>Sell Your Item</h3>
+                <form action="/submit-item" method="post" enctype="multipart/form-data">
+                    <label for="item-name">Item Name:</label>
+                    <input type="text" id="item-name" name="item-name" required />
+        
+                    <label for="item-price">Price ($):</label>
+                    <input type="number" id="item-price" name="item-price" step="0.01" required />
+        
+                    <label for="item-photo">Upload Photo:</label>
+                    <input type="file" id="item-photo" name="item-photo" accept="image/*" required />
+        
+                    <label for="item-description">Description:</label>
+                    <textarea id="item-description" name="item-description" rows="4" required></textarea>
+        
+                    <button type="submit">Submit Item</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
