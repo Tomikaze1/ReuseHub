@@ -1,17 +1,6 @@
-document.getElementById('search-bar').addEventListener('input', function() {
-  var query = this.value.toLowerCase();
-  var videos = document.querySelectorAll('.video-item');
 
-  videos.forEach(function(video) {
-      var title = video.getAttribute('data-title').toLowerCase();
-      if (title.includes(query)) {
-          video.style.display = 'block'; // Show video if query matches title
-      } else {
-          video.style.display = 'none'; // Hide video if query does not match
-      }
-  });
-});
 
+// local makers
 function toggleLocalMakers() {
   const list = document.getElementById('local-makers-list');
   list.style.display = list.style.display === 'none' ? 'block' : 'none';
@@ -29,7 +18,7 @@ document.querySelectorAll('.sell-button').forEach(button => {
 
 
 
-
+//project galllery
 
 function toggleLike(button) {
   const likeCount = button.querySelector('.like-count');

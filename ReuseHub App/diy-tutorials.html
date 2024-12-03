@@ -4,11 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIY Tutorials</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./Photo/1.png'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-position: center; 
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Home Button */
+        button {
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            position: relative;
+            background: transparent;
+            color: #54b942;
+            text-transform: uppercase;
+            border: 3px solid #54b942;
+            cursor: pointer;
+            transition: all 0.7s;
+            overflow: hidden;
+            border-radius: 50px;
+        }
+
+        button:hover {
+            color: #fff;
+        }
+
+        span {
+            transition: all 0.7s;
+            z-index: -1;
+        }
+
+        button .first {
+            content: "";
+            position: absolute;
+            right: 100%;
+            top: 0;
+            width: 25%;
+            height: 100%;
+            background: #54b942;
+        }
+
+        button:hover .first {
+            top: 0;
+            right: 0;
+        }
+
+        button .second {
+            content: "";
+            position: absolute;
+            left: 25%;
+            top: -100%;
+            height: 100%;
+            width: 25%;
+            background: #54b942;
+        }
+
+        button:hover .second {
+            top: 0;
+            left: 50%;
+        }
+
+        button .third {
+            content: "";
+            position: absolute;
+            left: 50%;
+            height: 100%;
+            top: 100%;
+            width: 25%;
+            background: #54b942;
+        }
+
+        button:hover .third {
+            top: 0;
+            left: 25%;
+        }
+
+        button .fourth {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 0;
+            height: 100%;
+            width: 25%;
+            background: #54b942;
+        }
+
+        button:hover .fourth {
+            top: 0;
+            left: 0;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #54b942;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Video Container */
+        #video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .video-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .video-item video {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .video-item p {
+            padding: 10px;
+            margin: 0;
+            background-color: #f1f1f1;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #video-container {
+                grid-template-columns: 1fr;
+            }
+
+            #search-bar {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html">Back to Home</a>
+        <button>
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+            <span class="fourth"></span>
+            <a href="index.html">Back to Home</a>
+        </button>
     </header>
     <main>
         <h2>DIY Tutorials</h2>
@@ -31,7 +209,24 @@
                     </video>
                     <p>Video 2</p>
                 </div>
+            </div>
         </section>
     </main>
+    <script>
+        // JavaScript for search functionality
+        document.getElementById('search-bar').addEventListener('input', function () {
+            var query = this.value.toLowerCase(); // Convert input to lowercase
+            var videos = document.querySelectorAll('.video-item'); // Select all video items
+
+            videos.forEach(function (video) {
+                var title = video.getAttribute('data-title').toLowerCase(); // Get title and convert to lowercase
+                if (title.includes(query)) {
+                    video.style.display = 'block'; // Show video if match
+                } else {
+                    video.style.display = 'none'; // Hide video if no match
+                }
+            });
+        });
+    </script>
 </body>
 </html>
