@@ -4,7 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./Photo/1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        header a {
+            padding: 15px 30px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #54b942;
+            border: 2px solid #54b942;
+            border-radius: 50px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+        }
+
+        header a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header a:hover::before {
+            transform: scaleX(1);
+        }
+
+        header a:hover {
+            background-color: #3a872d;
+            border-color: #3a872d;
+        }
+
+        /* Gallery Section */
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 20px;
+            color: #54b942;
+        }
+
+        #project-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 10px; /* Reduced gap */
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ddd; /* Reduced border */
+            padding: 10px; /* Reduced padding */
+            border-radius: 5px;
+            text-align: center;
+            max-width: 250px; /* Reduced max-width */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            background-color: #e6f9e6;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .gallery-item-info {
+            margin-top: 10px;
+        }
+
+        .like-button {
+            background: none;
+            border: none;
+            color: #ff5959;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .like-button:focus {
+            outline: none;
+        }
+
+        .like-count {
+            margin-left: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,26 +130,127 @@
     <main>
         <h2>Project Gallery</h2>
         <section id="project-gallery" class="feature-section">
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="photo/project1.jpg" alt="Recycled Project 1" />
-                    <div class="gallery-item-info">
-                        <p>Upcycled Chair</p>
-                        <button class="like-button" onclick="toggleLike(this)">
-                            ❤️ <span class="like-count">0</span>
-                        </button>
-                    </div>
+            <!-- Gallery Items (4 columns and 3 rows + 3 more items) -->
+            <div class="gallery-item">
+                <img src="photo/project1.jpg" alt="Recycled Project 1" />
+                <div class="gallery-item-info">
+                    <p>Upcycled Chair</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
                 </div>
-                <div class="gallery-item">
-                    <img src="photo/project2.jpg" alt="Recycled Project 2" />
-                    <div class="gallery-item-info">
-                        <p>Repurposed Lamp</p>
-                        <button class="like-button" onclick="toggleLike(this)">
-                            ❤️ <span class="like-count">0</span>
-                        </button>
-                    </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project2.jpg" alt="Recycled Project 2" />
+                <div class="gallery-item-info">
+                    <p>Repurposed Lamp</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project3.jpg" alt="Recycled Project 3" />
+                <div class="gallery-item-info">
+                    <p>Wooden Table</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project4.jpg" alt="Recycled Project 4" />
+                <div class="gallery-item-info">
+                    <p>Upcycled Shelf</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project5.jpg" alt="Recycled Project 5" />
+                <div class="gallery-item-info">
+                    <p>Recycled Planter</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project6.jpg" alt="Recycled Project 6" />
+                <div class="gallery-item-info">
+                    <p>Repurposed Pallet Bench</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project7.jpg" alt="Recycled Project 7" />
+                <div class="gallery-item-info">
+                    <p>Upcycled Table Lamp</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project8.jpg" alt="Recycled Project 8" />
+                <div class="gallery-item-info">
+                    <p>Recycled Art Frame</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project9.jpg" alt="Recycled Project 9" />
+                <div class="gallery-item-info">
+                    <p>Wooden Planter Box</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project10.jpg" alt="Recycled Project 10" />
+                <div class="gallery-item-info">
+                    <p>Recycled Table</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project11.jpg" alt="Recycled Project 11" />
+                <div class="gallery-item-info">
+                    <p>Upcycled Storage</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="photo/project12.jpg" alt="Recycled Project 12" />
+                <div class="gallery-item-info">
+                    <p>Repurposed Clock</p>
+                    <button class="like-button" onclick="toggleLike(this)">
+                        ❤️ <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
         </section>
     </main>
+
+    <script>
+        // JavaScript to toggle like count
+        function toggleLike(button) {
+            const likeCountElement = button.querySelector('.like-count');
+            let currentCount = parseInt(likeCountElement.textContent);
+            currentCount = button.classList.contains('liked') ? currentCount - 1 : currentCount + 1;
+            likeCountElement.textContent = currentCount;
+            button.classList.toggle('liked');
+        }
+    </script>
 </body>
 </html>
-

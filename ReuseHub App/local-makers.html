@@ -3,42 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Makers</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Local Makers | ReUse Hub</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./Photo/1.png'); /* Set background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Back to Home Button Styles */
+        .back-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #54b942;
+            border: 2px solid #54b942;
+            border-radius: 50px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+        }
+
+        .back-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .back-button:hover::before {
+            transform: scaleX(1);
+        }
+
+        .back-button:hover {
+            background-color: #3a872d;
+            border-color: #3a872d;
+        }
+
+        h2 {
+            text-align: center;
+            color: #54b942;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .feature-section {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            padding: 20px;
+        }
+
+        .maker {
+            background: transparent; /* Transparent background */
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Slight border for visibility */
+            padding: 10px; /* Reduced padding for smaller cards */
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .maker:hover {
+            background-color: rgba(84, 185, 66, 0.2); /* Light greenish hover effect */
+        }
+
+        .maker img {
+            width: 100%;
+            max-width: 120px; /* Reduced image size */
+            border-radius: 50%;
+            margin-bottom: 10px; /* Reduced margin */
+        }
+
+        .maker h3 {
+            color: #222121;
+            font-size: 16px; /* Smaller font size */
+        }
+
+        .maker p {
+            color: #212121;
+            font-size: 12px; /* Smaller font size */
+        }
+
+        .contact-button {
+            padding: 8px 16px; /* Smaller button */
+            font-size: 14px; /* Smaller text */
+            background: #54b942;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: #3a8f2a;
+        }
+
+        @media (max-width: 600px) {
+            .feature-section {
+                grid-template-columns: 1fr; /* 1 column on small screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html">Back to Home</a>
+        <a href="index.html" class="back-button">Back to Home</a>
     </header>
+
     <main>
         <h2>Local Makers</h2>
+        <p class="intro-text">
+            Connect with skilled local makers who offer tutorials and guidance on turning waste into valuable items.
+        </p>
+
         <section id="local-makers" class="feature-section">
+            <!-- Maker 1 -->
             <div class="maker">
+                <img src="john_doe.jpg" alt="John Doe" class="maker-image">
                 <h3>John Doe</h3>
                 <p>Expert in woodworking and furniture upcycling.</p>
-                <button onclick="contactMaker('John Doe')">Ask for Tips</button>
+                <button class="contact-button" onclick="contactMaker('John Doe')">Ask for Tips</button>
             </div>
+
+            <!-- Maker 2 -->
             <div class="maker">
+                <img src="jane_smith.jpg" alt="Jane Smith" class="maker-image">
                 <h3>Jane Smith</h3>
                 <p>Specialist in textile crafts and fabric reuse.</p>
-                <button onclick="contactMaker('Jane Smith')">Ask for Tips</button>
+                <button class="contact-button" onclick="contactMaker('Jane Smith')">Ask for Tips</button>
             </div>
+
+            <!-- Maker 3 -->
             <div class="maker">
+                <img src="alex_lee.jpg" alt="Alex Lee" class="maker-image">
                 <h3>Alex Lee</h3>
                 <p>Focuses on metal crafting and repurposing scrap metals.</p>
-                <button onclick="contactMaker('Alex Lee')">Ask for Tips</button>
+                <button class="contact-button" onclick="contactMaker('Alex Lee')">Ask for Tips</button>
             </div>
-        </div>
+
+            <!-- Maker 4 -->
+            <div class="maker">
+                <img src="sarah_wong.jpg" alt="Sarah Wong" class="maker-image">
+                <h3>Sarah Wong</h3>
+                <p>Expert in ceramic crafts and pottery upcycling.</p>
+                <button class="contact-button" onclick="contactMaker('Sarah Wong')">Ask for Tips</button>
+            </div>
+
+            <!-- Maker 5 -->
+            <div class="maker">
+                <img src="michael_zhou.jpg" alt="Michael Zhou" class="maker-image">
+                <h3>Michael Zhou</h3>
+                <p>Skilled in glass repurposing and creating sustainable decor.</p>
+                <button class="contact-button" onclick="contactMaker('Michael Zhou')">Ask for Tips</button>
+            </div>
+
+            <!-- Maker 6 -->
+            <div class="maker">
+                <img src="olivia_tan.jpg" alt="Olivia Tan" class="maker-image">
+                <h3>Olivia Tan</h3>
+                <p>Master of eco-friendly gardening and upcycled planters.</p>
+                <button class="contact-button" onclick="contactMaker('Olivia Tan')">Ask for Tips</button>
+            </div>
         </section>
     </main>
+
+    <script>
+        function contactMaker(name) {
+            alert(`You are now connected with ${name}! You can now ask for tips and guidance.`);
+        }
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

@@ -4,7 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketplace</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./Photo/1.png'); /* Set background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Back to Home Button Styles */
+        header a {
+            padding: 15px 30px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #54b942;
+            border: 2px solid #54b942;
+            border-radius: 50px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+        }
+
+        header a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header a:hover::before {
+            transform: scaleX(1);
+        }
+
+        header a:hover {
+            background-color: #3a872d;
+            border-color: #3a872d;
+        }
+
+        /* Marketplace Section */
+        #materials-marketplace {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #54b942;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Marketplace Grid Layout */
+        #marketplace-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-rows: repeat(2, auto);  /* 2 rows */
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Marketplace Item Styles */
+        .marketplace-item {
+            background: rgba(255, 255, 255, 0.8); /* Transparent background */
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .marketplace-item:hover {
+            background-color: #e6f9e6; /* Slight green tint on hover */
+        }
+
+        .marketplace-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .marketplace-item h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .marketplace-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .buy-button,
+        .sell-button {
+            padding: 8px 15px;
+            font-size: 14px;
+            margin-top: 10px;
+            background-color: #54b942;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover,
+        .sell-button:hover {
+            background-color: #3a8f2a;
+        }
+
+        /* Sell Item Form Styles */
+        #sell-item-form {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        #sell-item-form h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        #sell-item-form label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #sell-item-form input,
+        #sell-item-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        #sell-item-form button {
+            background-color: #54b942;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #sell-item-form button:hover {
+            background-color: #3a8f2a;
+        }
+
+        /* Hidden Class to Hide Elements */
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,24 +202,62 @@
             <p>Buy or sell sustainable materials easily.</p>
             
             <div id="marketplace-content" class="marketplace-grid">
-                Example Item 1 -
+                <!-- Example Item 1 -->
                 <div class="marketplace-item">
                     <img src="photo/sample1.jpg" alt="Sample Material 1" />
                     <h3>Sample Material 1</h3>
                     <p>$10.00</p>
                     <button class="buy-button">Buy Now</button>
-                    <button class="sell-button">Sell Similar</button>
+                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
                 </div>
-                 Example Item 2 -
+                
+                <!-- Example Item 2 -->
                 <div class="marketplace-item">
                     <img src="photo/sample2.jpg" alt="Sample Material 2" />
                     <h3>Sample Material 2</h3>
                     <p>$8.00</p>
                     <button class="buy-button">Buy Now</button>
-                    <button class="sell-button">Sell Similar</button>
+                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                </div>
+                
+                <!-- Example Item 3 -->
+                <div class="marketplace-item">
+                    <img src="photo/sample3.jpg" alt="Sample Material 3" />
+                    <h3>Sample Material 3</h3>
+                    <p>$12.00</p>
+                    <button class="buy-button">Buy Now</button>
+                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                </div>
+
+                <!-- Example Item 4 -->
+                <div class="marketplace-item">
+                    <img src="photo/sample4.jpg" alt="Sample Material 4" />
+                    <h3>Sample Material 4</h3>
+                    <p>$15.00</p>
+                    <button class="buy-button">Buy Now</button>
+                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                </div>
+
+                <!-- Example Item 5 -->
+                <div class="marketplace-item">
+                    <img src="photo/sample5.jpg" alt="Sample Material 5" />
+                    <h3>Sample Material 5</h3>
+                    <p>$7.50</p>
+                    <button class="buy-button">Buy Now</button>
+                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                </div>
+
+                <!-- Example Item 6 -->
+                <div class="marketplace-item">
+                    <img src="photo/sample6.jpg" alt="Sample Material 6" />
+                    <h3>Sample Material 6</h3>
+                    <p>$20.00</p>
+                    <button class="buy-button">Buy Now</button>
+                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
                 </div>
             </div>
             
+            <!-- Form to sell an item (hidden by default) -->
             <div id="sell-item-form" class="hidden">
                 <h3>Sell Your Item</h3>
                 <form action="/submit-item" method="post" enctype="multipart/form-data">
@@ -54,5 +278,17 @@
             </div>
         </section>
     </main>
+
+    <script>
+        // Function to toggle visibility of the sell item form
+        function toggleSellForm() {
+            const sellForm = document.getElementById('sell-item-form');
+            if (sellForm.classList.contains('hidden')) {
+                sellForm.classList.remove('hidden');
+            } else {
+                sellForm.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
