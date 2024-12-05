@@ -17,6 +17,10 @@
             background-position: center; 
             color: #333;
         }
+        @font-face {
+        font-family: 'CustomFont'; 
+        src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
+}
 
         header {
             text-align: center;
@@ -54,9 +58,12 @@
         }
 
         h2 {
+            font-family: 'CustomFont', Arial, sans-serif; 
             text-align: center;
-            margin-bottom: 20px;
+            margin-top: 10px; 
+            margin-bottom: 10px;
             color: #54b942;
+            font-size: 3.5em; 
         }
 
         /* Search Bar */
@@ -71,8 +78,8 @@
             width: 100%;
             max-width: 400px;
             padding: 10px;
+            border-radius: 20px;
             border: 1px solid #ccc;
-            border-radius: 5px;
             font-size: 16px;
         }
 
