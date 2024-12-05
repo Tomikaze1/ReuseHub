@@ -7,141 +7,132 @@
     <style>
         /* Global Styles */
         body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-image: url('./Photo/1.png'); 
-        background-size: cover; 
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-        background-position: center; 
-        color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./Photo/1.png'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-position: center; 
+            color: #333;
         }
 
         header {
-        text-align: center;
-        margin-top: 20px;
+            text-align: center;
+            margin-top: 20px;
         }
 
         /* Back to Home Button Styles */
         .back-button {
-        display: inline-block;
-        padding: 15px 30px;
-        font-size: 12px;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #fff;
-        background-color: #54b942;
-        border: 2px solid #54b942;
-        border-radius: 50px;
-        text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s ease-in-out;
-        cursor: pointer;
-        }
-
-        .back-button::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.1);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease-in-out;
-        }
-
-        .back-button:hover::before {
-        transform: scaleX(1);
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #54b942;
+            border: 2px solid #54b942;
+            border-radius: 50px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
         }
 
         .back-button:hover {
-        background-color: #3a872d;
-        border-color: #3a872d;
+            background-color: #3a872d;
+            border-color: #3a872d;
         }
 
         /* Main Content */
         main {
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #54b942;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #54b942;
         }
 
         /* Search Bar */
         .search-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
         #search-bar {
-        width: 100%;
-        max-width: 400px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
         /* Video Container */
         #video-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .video-item {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        text-align: center;
+            background-color: transparent;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .video-item video {
-        width: 100%;
-        border-bottom: 1px solid #ddd;
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
         }
 
-        .video-item p {
-        padding: 10px;
-        margin: 0;
-        background-color: #f1f1f1;
-        color: #333;
-        font-weight: bold;
+        .video-item .title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            padding: 15px;
+            color: #333;
+        }
+
+        .video-item .description {
+            font-size: 14px;
+            color: #555;
+            padding: 0 15px 15px;
+            text-align: justify;
         }
 
         /* Responsive Design */
         @media (max-width: 600px) {
-        #video-container {
-        grid-template-columns: 1fr;
-        }
+            #video-container {
+                grid-template-columns: 1fr;
+            }
 
-        #search-bar {
-            width: 90%;
+            #search-bar {
+                width: 90%;
+            }
         }
-    }
     </style>
 </head>
 <body>
     <header>
-        <buttons>
-            <span class="first"></span>
-            <span class="second"></span>
-            <span class="third"></span>
-            <span class="fourth"></span>
-            <a href="index.html" class="back-button">Back to Home</a>
-        </buttons>
+        <a href="index.html" class="back-button">Back to Home</a>
     </header>
     <main>
         <h2>DIY Tutorials</h2>
@@ -150,47 +141,73 @@
                 <input type="text" id="search-bar" placeholder="Search for tutorials..." />
             </div>
             <div id="video-container">
-                <div class="video-item" data-title="Video 1">
+                <!-- Video 1 -->
+                <div class="video-item" data-title="Waste CardBoard House Making Ideas">
                     <video controls>
-                        <source src="path/to/video1.mp4" type="video/mp4">
+                        <source src="Videos/1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Video 1</p>
+                    <p class="title">Waste CardBoard House Making Ideas</p>
+                    <p class="description">Learn how to creatively reuse cardboard to make stunning DIY houses.<br><br>
+                        Materials:<br>
+                        Cardboard, glue sticks, fevi quick, sun board, white acrelic Wall putti , acrelic colour, light.</p>
                 </div>
-                <div class="video-item" data-title="Video 2">
+                <!-- Video 2 -->
+                <div class="video-item" data-title="Boil an old CD for 3 minutes">
                     <video controls>
-                        <source src="path/to/video2.mp4" type="video/mp4">
+                        <source src="Videos/2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Video 2</p>
+                    <p class="title">Boil an old CD for 3 minutes</p>
+                    <p class="description">Transform old CDs into beautiful home decor with this simple boiling trick.
+                        <br><br>The ingredients used in the video:<br>
+                        Old cd.
+                        Ribbon.
+                        Glue gun.
+                        </p>
                 </div>
-                <div class="video-item" data-title="Video 3">
+                <!-- Video 3 -->
+                <div class="video-item" data-title="Plastic Bottle Flower Vase">
                     <video controls>
-                        <source src="path/to/video3.mp4" type="video/mp4">
+                        <source src="Videos/3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Video 3</p>
+                    <p class="title">Plastic Bottle Flower Vase</p>
+                    <p class="description">Easy Plastic bottle Flower vase making at home.<br><br>
+                        Materials :
+                        1. Plastic bottle
+                        2. Balloon
+                        3. Glue gun
+                        4. White cement +pop (1:1)
+                        5. Acrylic color
+                        6. Clear varnish</p>
                 </div>
-                <div class="video-item" data-title="Video 4">
+                <!-- Video 4 -->
+                <div class="video-item" data-title="Plastic Bottle Crafts">
                     <video controls>
-                        <source src="path/to/video4.mp4" type="video/mp4">
+                        <source src="Videos/4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Video 4</p>
+                    <p class="title">Plastic Bottle Crafts</p>
+                    <p class="description">Discover innovative ways to turn plastic bottles into functional items.</p>
                 </div>
-                <div class="video-item" data-title="Video 5">
+                <!-- Video 5 -->
+                <div class="video-item" data-title="DIY Candle Holder">
                     <video controls>
-                        <source src="path/to/video5.mp4" type="video/mp4">
+                        <source src="Videos/5.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Video 5</p>
+                    <p class="title">DIY Candle Holder</p>
+                    <p class="description">Make elegant candle holders from everyday materials in this DIY guide.</p>
                 </div>
-                <div class="video-item" data-title="Video 6">
+                <!-- Video 6 -->
+                <div class="video-item" data-title="Creative Paper Flowers">
                     <video controls>
-                        <source src="path/to/video6.mp4" type="video/mp4">
+                        <source src="Videos/6.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Video 6</p>
+                    <p class="title">Creative Paper Flowers</p>
+                    <p class="description">Learn how to make stunning paper flowers for decorations and gifts.</p>
                 </div>
             </div>
         </section>
@@ -198,15 +215,15 @@
     <script>
         // JavaScript for search functionality
         document.getElementById('search-bar').addEventListener('input', function () {
-            var query = this.value.toLowerCase(); // Convert input to lowercase
-            var videos = document.querySelectorAll('.video-item'); // Select all video items
+            var query = this.value.toLowerCase();
+            var videos = document.querySelectorAll('.video-item');
 
             videos.forEach(function (video) {
-                var title = video.getAttribute('data-title').toLowerCase(); // Get title and convert to lowercase
+                var title = video.getAttribute('data-title').toLowerCase();
                 if (title.includes(query)) {
-                    video.style.display = 'block'; // Show video if match
+                    video.style.display = 'block';
                 } else {
-                    video.style.display = 'none'; // Hide video if no match
+                    video.style.display = 'none';
                 }
             });
         });
