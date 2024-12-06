@@ -18,6 +18,11 @@
             color: #333;
         }
 
+        @font-face {
+        font-family: 'CustomFont'; 
+        src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
+        }
+
         /* Header Styles */
         header {
             text-align: center;
@@ -70,13 +75,19 @@
         }
 
         h2 {
+            margin-top:10px;
+            margin-bottom:5px;
+            font-family: 'CustomFont';
+            letter-spacing: 5px;
+            font-size: 4.5em;
             color: #54b942;
-            font-size: 24px;
-            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         p {
-            font-size: 16px;
+            font-style: italic;
+            margin-top:5px;
+            font-size: 20px;
             margin-bottom: 20px;
         }
 
@@ -105,10 +116,11 @@
         }
 
         .marketplace-item img {
-            width: 70%;
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
+            margin: 10px; /* Fixed margin around each image */
         }
 
         .marketplace-item h3 {
@@ -191,6 +203,24 @@
         .hidden {
             display: none;
         }
+
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .popup.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -207,27 +237,27 @@
                 <div class="marketplace-item">
                     <img src="photo/Bottle Caps.jpg" alt="Bottle Caps" />
                     <h3>Bottle Caps</h3>
-                    <p>₱100.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                    <p>₱5.00</p>
+                    <button class="buy-button" onclick="showPopup('Bought Bottle Caps!')">Buy Now</button>
+                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
                 
                 <!-- Example Item 2 -->
                 <div class="marketplace-item">
                     <img src="photo/colourful-fabric.webp" alt="colourful-fabric" />
                     <h3>colourful-fabric</h3>
-                    <p>₱50.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                    <p>₱10.00</p>
+                    <button class="buy-button" onclick="showPopup('Bought Colourful Fabric!')">Buy Now</button>
+                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
                 
                 <!-- Example Item 3 -->
                 <div class="marketplace-item">
                     <img src="photo/old-electronics.webp" alt="old-electronics" />
                     <h3>old-electronics</h3>
-                    <p>₱150.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                    <p>₱50.00</p>
+                    <button class="buy-button" onclick="showPopup('Bought Old Electronics!')">Buy Now</button>
+                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
 
                 <!-- Example Item 4 -->
@@ -235,8 +265,8 @@
                     <img src="photo/reclaimed-timber.jpeg" alt="reclaimed-timber" />
                     <h3>reclaimed-timber</h3>
                     <p>₱250.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                    <button class="buy-button" onclick="showPopup('Bought Reclaimed Timber!')">Buy Now</button>
+                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
 
                 <!-- Example Item 5 -->
@@ -244,8 +274,8 @@
                     <img src="photo/Scrap metal.webp" alt="Scrap metal" />
                     <h3>Scrap Metal</h3>
                     <p>₱150.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                    <button class="buy-button" onclick="showPopup('Bought Scrap Metal!')">Buy Now</button>
+                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
 
                 <!-- Example Item 6 -->
@@ -253,8 +283,8 @@
                     <img src="photo/Wood Offcuts.webp" alt="Wood Offcuts" />
                     <h3>Wood offcuts</h3>
                     <p>₱125.00</p>
-                    <button class="buy-button">Buy Now</button>
-                    <button class="sell-button" onclick="toggleSellForm()">Sell Similar</button>
+                    <button class="buy-button" onclick="showPopup('Bought Wood Offcuts!')">Buy Now</button>
+                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
             </div>
             
@@ -280,7 +310,20 @@
         </section>
     </main>
 
+    <!-- Popup for Buy Now or Sell Similar -->
+    <div id="popup" class="popup"></div>
+
     <script>
+        // Function to show popup with message
+        function showPopup(message) {
+            const popup = document.getElementById('popup');
+            popup.textContent = message;
+            popup.classList.add('active');
+            setTimeout(() => {
+                popup.classList.remove('active');
+            }, 2000); // Hide popup after 2 seconds
+        }
+
         // Function to toggle visibility of the sell item form
         function toggleSellForm() {
             const sellForm = document.getElementById('sell-item-form');
