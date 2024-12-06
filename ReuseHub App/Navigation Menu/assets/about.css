@@ -131,6 +131,9 @@ header {
   top: 0;
   z-index: 1000;
   background-color: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 h1 { 
