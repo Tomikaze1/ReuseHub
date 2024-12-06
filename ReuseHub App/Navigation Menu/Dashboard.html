@@ -15,24 +15,71 @@
             <a href="contact.html">Contact</a>
             <a href="services.html">Services</a>
             <a href="about.html">About Us</a>
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
         </nav>
-        <div class="header-content">
-            <div class="logo" aria-label="ReuseHub Logo"></div>
-        </div>
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
-        <nav class="dropdown-menu" id="dropdownMenu">
+        <div class="dropdown-menu" id="dropdownMenu">
             <a href="../login.html" onclick="logOut()">Log Out</a>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Welcome to the Dashboard</h1>
-        <!-- <p>.</p>
-         Add more content for the dashboard here -->
+        <section class="welcome">
+            <h1>Welcome, [Username]!</h1>
+            <p>Let's repurpose, create, and inspire sustainable living together.</p>
+        </section>
+
+        <section class="featured-guides">
+            <h2>Featured DIY Guides</h2>
+            <div class="guides">
+                <div class="guide">
+                    <img src="assets/guide1.jpg" alt="Guide 1">
+                    <h3>Turn Old Jeans into a Stylish Bag</h3>
+                    <p>Transform your unused denim into a durable, trendy bag!</p>
+                    <a href="guides/denim-bag.html" class="btn">View Guide</a>
+                </div>
+                <div class="guide">
+                    <img src="assets/guide2.jpg" alt="Guide 2">
+                    <h3>Repurposed Glass Jars</h3>
+                    <p>Learn how to make decorative containers out of glass jars.</p>
+                    <a href="guides/glass-jars.html" class="btn">View Guide</a>
+                </div>
+                <div class="guide">
+                    <img src="assets/guide3.jpg" alt="Guide 3">
+                    <h3>DIY Wooden Pallet Furniture</h3>
+                    <p>Create unique furniture pieces from reclaimed wood pallets.</p>
+                    <a href="guides/pallet-furniture.html" class="btn">View Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="../local-makers.html">Find Local Makers</a></li>
+                <li><a href="Ideas.html">Upcycling Inspiration</a></li>
+                <li><a href="Community.html">Join the Community</a></li>
+                <li><a href="Contact.html">Get in Touch</a></li>
+            </ul>
+        </section>
+
+        <section class="quote">
+            <blockquote>
+                “The greatest threat to our planet is the belief that someone else will save it.” – Robert Swan
+            </blockquote>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 ReuseHub. All rights reserved.</p>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <span class="logo_name">ReuseHub</span>
+                
+            </div> 
+            <div class="bottom-details">
+                <span class="copyright_text">&copy; 2024 ReuseHub. All rights reserved.</span>
+            </div>
+        </div>
     </footer>
 
     <script src="../Assets/script.js"></script>
