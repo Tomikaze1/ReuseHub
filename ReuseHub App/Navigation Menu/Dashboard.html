@@ -15,24 +15,68 @@
             <a href="contact.html">Contact</a>
             <a href="services.html">Services</a>
             <a href="about.html">About Us</a>
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
         </nav>
-        <div class="header-content">
-            <div class="logo" aria-label="ReuseHub Logo"></div>
-        </div>
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
-        <nav class="dropdown-menu" id="dropdownMenu">
+        <div class="dropdown-menu" id="dropdownMenu">
             <a href="../login.html" onclick="logOut()">Log Out</a>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Welcome to the Dashboard</h1>
-        <!-- <p>.</p>
-         Add more content for the dashboard here -->
+        <section class="welcome">
+            <h1>Welcome, User!</h1>
+            <p>Let's repurpose, create, and inspire sustainable living together.</p>
+        </section>
+
+        <section class="featured-guides">
+            <h2>Featured DIY Guides</h2>
+            <div class="guides">
+                <div class="guide">
+                    <img src="assets/guide1.png" alt="Guide 1">
+                    <h3><a href="../diy-tutorials.html#video1">Waste CardBoard House Making Ideas</a></h3>
+                    <p>Learn how to creatively reuse cardboard to make stunning DIY houses.</p>
+                </div>
+                <div class="guide">
+                    <img src="assets/guide2.png" alt="Guide 2">
+                    <h3><a href="../diy-tutorials.html#video2">Boil an Old CD for 3 Minutes</a></h3>
+                    <p>Transform old CDs into beautiful home decor with this simple boiling trick.</p>
+                </div>
+                <div class="guide">
+                    <img src="assets/guide3.png" alt="Guide 3">
+                    <h3><a href="../diy-tutorials.html#video3">Plastic Bottle Flower Vase</a></h3>
+                    <p>Create easy and stylish flower vases from plastic bottles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="../local-makers.html">Find Local Makers</a></li>
+                <li><a href="Ideas.html">Upcycling Inspiration</a></li>
+                <li><a href="Community.html">Join the Community</a></li>
+                <li><a href="Contact.html">Get in Touch</a></li>
+            </ul>
+        </section>
+
+        <section class="quote">
+            <blockquote>
+                “The greatest threat to our planet is the belief that someone else will save it.” – Robert Swan
+            </blockquote>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 ReuseHub. All rights reserved.</p>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <span class="logo_name">ReuseHub</span>
+                
+            </div> 
+            <div class="bottom-details">
+                <span class="copyright_text">&copy; 2024 ReuseHub. All rights reserved.</span>
+            </div>
+        </div>
     </footer>
 
     <script src="../Assets/script.js"></script>
