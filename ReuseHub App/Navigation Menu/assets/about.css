@@ -271,7 +271,7 @@ h1 {
 
 /* Card Section */
 .container {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,7 +312,7 @@ h1 {
 
 /* Footer Section */
 footer {
-  background: #000;
+  background-color: #679E45;
   width: 100%;
   padding: 30px 40px;
 }
@@ -329,8 +329,9 @@ footer .content .top {
 }
 
 .content .top .logo-details {
-  color: #fdd166;
+  color: #333;
   font-size: 30px;
+  font-weight: bold;
 }
 
 .content .top .media-icons a {
