@@ -23,6 +23,11 @@
             margin-top: 20px;
         }
 
+        @font-face {
+        font-family: 'CustomFont'; 
+        src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
+        }
+
         /* Back to Home Button Styles */
         .back-button {
             display: inline-block;
@@ -64,27 +69,34 @@
         }
 
         h2 {
+            font-family:'CustomFont' ;
             text-align: center;
             color: #54b942;
+            font-size: 60px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            letter-spacing: 3px;
         }
 
         .intro-text {
             text-align: center;
             margin-bottom: 20px;
             font-style: italic;
+            font-size: 20px;
         }
 
         .feature-section {
             display: grid;
             gap: 20px;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-columns: repeat(3, 1fr); 
             padding: 20px;
         }
 
         .maker {
-            background: transparent; /* Transparent background */
-            border: 1px solid rgba(0, 0, 0, 0.1); /* Slight border for visibility */
-            padding: 10px; /* Reduced padding for smaller cards */
+            background: transparent; 
+            border: 1px solid rgba(0, 0, 0, 0.1); 
+            padding: 10px; 
             border-radius: 5px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -92,29 +104,29 @@
         }
 
         .maker:hover {
-            background-color: rgba(84, 185, 66, 0.2); /* Light greenish hover effect */
+            background-color: rgba(84, 185, 66, 0.2);
         }
 
         .maker img {
             width: 100%;
-            max-width: 120px; /* Reduced image size */
+            max-width: 120px; 
             border-radius: 50%;
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 10px; 
         }
 
         .maker h3 {
             color: #222121;
-            font-size: 16px; /* Smaller font size */
+            font-size: 20px; 
         }
 
         .maker p {
             color: #212121;
-            font-size: 12px; /* Smaller font size */
+            font-size: 16px;
         }
 
         .contact-button {
-            padding: 8px 16px; /* Smaller button */
-            font-size: 14px; /* Smaller text */
+            padding: 8px 16px; 
+            font-size: 14px;
             background: #54b942;
             color: #fff;
             border: none;
@@ -129,7 +141,7 @@
 
         @media (max-width: 600px) {
             .feature-section {
-                grid-template-columns: 1fr; /* 1 column on small screens */
+                grid-template-columns: 1fr; 
             }
         }
     </style>
@@ -148,15 +160,15 @@
         <section id="local-makers" class="feature-section">
             <!-- Maker 1 -->
             <div class="maker">
-                <img src="john_doe.jpg" alt="John Doe" class="maker-image">
-                <h3>John Doe</h3>
+                <img src="./Photo/Sung.png" alt="Sung Woo" class="maker-image">
+                <h3>Sung Woo</h3>
                 <p>Expert in woodworking and furniture upcycling.</p>
-                <button class="contact-button" onclick="contactMaker('John Doe')">Ask for Tips</button>
+                <button class="contact-button" onclick="contactMaker('Sung Woo')">Ask for Tips</button>
             </div>
 
             <!-- Maker 2 -->
             <div class="maker">
-                <img src="jane_smith.jpg" alt="Jane Smith" class="maker-image">
+                <img src="./Photo/Jane.png" alt="Jane Smith" class="maker-image">
                 <h3>Jane Smith</h3>
                 <p>Specialist in textile crafts and fabric reuse.</p>
                 <button class="contact-button" onclick="contactMaker('Jane Smith')">Ask for Tips</button>
@@ -164,7 +176,7 @@
 
             <!-- Maker 3 -->
             <div class="maker">
-                <img src="alex_lee.jpg" alt="Alex Lee" class="maker-image">
+                <img src="./Photo/Alex.png" alt="Alex Lee" class="maker-image">
                 <h3>Alex Lee</h3>
                 <p>Focuses on metal crafting and repurposing scrap metals.</p>
                 <button class="contact-button" onclick="contactMaker('Alex Lee')">Ask for Tips</button>
@@ -172,7 +184,7 @@
 
             <!-- Maker 4 -->
             <div class="maker">
-                <img src="sarah_wong.jpg" alt="Sarah Wong" class="maker-image">
+                <img src="./Photo/Sarah.png" alt="Sarah Wong" class="maker-image">
                 <h3>Sarah Wong</h3>
                 <p>Expert in ceramic crafts and pottery upcycling.</p>
                 <button class="contact-button" onclick="contactMaker('Sarah Wong')">Ask for Tips</button>
@@ -180,7 +192,7 @@
 
             <!-- Maker 5 -->
             <div class="maker">
-                <img src="michael_zhou.jpg" alt="Michael Zhou" class="maker-image">
+                <img src="./Photo/Michael.png" alt="Michael Zhou" class="maker-image">
                 <h3>Michael Zhou</h3>
                 <p>Skilled in glass repurposing and creating sustainable decor.</p>
                 <button class="contact-button" onclick="contactMaker('Michael Zhou')">Ask for Tips</button>
@@ -188,7 +200,7 @@
 
             <!-- Maker 6 -->
             <div class="maker">
-                <img src="olivia_tan.jpg" alt="Olivia Tan" class="maker-image">
+                <img src="./Photo/Olivia.png" alt="Olivia Tan" class="maker-image">
                 <h3>Olivia Tan</h3>
                 <p>Master of eco-friendly gardening and upcycled planters.</p>
                 <button class="contact-button" onclick="contactMaker('Olivia Tan')">Ask for Tips</button>
