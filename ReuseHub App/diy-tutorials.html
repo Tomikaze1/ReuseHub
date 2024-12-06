@@ -151,7 +151,7 @@
             </div>
             <div id="video-container">
                 <!-- Video 1 -->
-                <div class="video-item" data-title="Waste CardBoard House Making Ideas">
+                <div class="video-item" id="video1" data-title="Waste CardBoard House Making Ideas">
                     <video controls>
                         <source src="Videos/1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -162,7 +162,7 @@
                         Cardboard, glue sticks, fevi quick, sun board, white acrelic Wall putti , acrelic colour, light.</p>
                 </div>
                 <!-- Video 2 -->
-                <div class="video-item" data-title="Boil an old CD for 3 minutes">
+                <div class="video-item" id="video2" data-title="Boil an old CD for 3 minutes">
                     <video controls>
                         <source src="Videos/2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -176,7 +176,7 @@
                         </p>
                 </div>
                 <!-- Video 3 -->
-                <div class="video-item" data-title="Plastic Bottle Flower Vase">
+                <div class="video-item" id="video3" data-title="Plastic Bottle Flower Vase">
                     <video controls>
                         <source src="Videos/3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -192,7 +192,7 @@
                         6. Clear varnish</p>
                 </div>
                 <!-- Video 4 -->
-                <div class="video-item" data-title="DIY: Simple Origami Fish - Paper Craft Tutorial">
+                <div class="video-item" id="video4" data-title="DIY: Simple Origami Fish - Paper Craft Tutorial">
                     <video controls>
                         <source src="Videos/4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -202,7 +202,7 @@
                     Material: Paper</p>
                 </div>
                 <!-- Video 5 -->
-                <div class="video-item" data-title="How To Make a Plastic Bottle Hand Fan">
+                <div class="video-item" id="video5" data-title="How To Make a Plastic Bottle Hand Fan">
                     <video controls>
                         <source src="Videos/5.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -212,7 +212,7 @@
                     Materials: IceCream Sticks, ToothPick, Hotglue, Plastic Bottle.</p>
                 </div>
                 <!-- Video 6 -->
-                <div class="video-item" data-title="How to make a Sand Clock">
+                <div class="video-item" id="video6" data-title="How to make a Sand Clock">
                     <video controls>
                         <source src="Videos/6.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -240,6 +240,24 @@
         </section>
     </main>
     <script>
+         window.onload = function() {
+        // Get the current hash (e.g., #video1)
+        var hash = window.location.hash;
+
+        // Hide all video sections initially
+        var videos = document.querySelectorAll('section[id^="video"]');
+        videos.forEach(function(video) {
+            video.style.display = 'none';
+        });
+
+        // Show the video that matches the hash
+        if (hash) {
+            var targetVideo = document.querySelector(hash);
+            if (targetVideo) {
+                targetVideo.style.display = 'block';
+            }
+        }
+    }
         // JavaScript for search functionality
         document.getElementById('search-bar').addEventListener('input', function () {
             var query = this.value.toLowerCase();
