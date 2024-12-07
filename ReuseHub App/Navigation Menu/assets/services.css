@@ -116,3 +116,46 @@ body {
   .dropdown-menu.show {
     display: block;
   }
+
+  /* Service Sections */
+.service-section {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+}
+
+.service-section h2 {
+  font-size: 30px;
+  color: #45a049;
+  margin-bottom: 15px;
+}
+
+.service-section p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.service-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .service-section {
+      width: 95%;
+  }
+
+  .service-img {
+      max-width: 100%;
+  }
+}
