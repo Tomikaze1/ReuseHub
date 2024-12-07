@@ -89,7 +89,7 @@ main {
 
 .guide {
   flex: 1 1 calc(33.333% - 20px);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(150, 241, 171, 0.4);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -106,7 +106,7 @@ main {
 
 .guide h3 a {
   font-size: 1.2em;
-  color: #54b942;  /* Green color for the link */
+  color: #212321;  /* Green color for the link */
   text-decoration: none;  /* Optional: removes the underline */
 }
 
@@ -116,7 +116,7 @@ main {
 
 .guide p {
   font-size: 1em;
-  color: #666;
+  color: #312e2e;
   margin-bottom: 20px;
 }
 
