@@ -29,7 +29,6 @@
             margin-top: 20px;
         }
 
-        /* Back to Home Button Styles */
         header a {
             padding: 15px 30px;
             font-size: 12px;
@@ -75,8 +74,8 @@
         }
 
         h2 {
-            margin-top:10px;
-            margin-bottom:5px;
+            margin-top: 10px;
+            margin-bottom: 5px;
             font-family: 'CustomFont';
             letter-spacing: 5px;
             font-size: 4.5em;
@@ -86,7 +85,7 @@
 
         p {
             font-style: italic;
-            margin-top:5px;
+            margin-top: 5px;
             font-size: 20px;
             margin-bottom: 20px;
         }
@@ -134,8 +133,7 @@
             color: #666;
         }
 
-        .buy-button,
-        .sell-button {
+        .buy-button {
             padding: 8px 15px;
             font-size: 14px;
             margin-top: 10px;
@@ -147,61 +145,8 @@
             transition: background-color 0.3s ease;
         }
 
-        .buy-button:hover,
-        .sell-button:hover {
+        .buy-button:hover {
             background-color: #3a8f2a;
-        }
-
-        /* Sell Item Form Styles */
-        #sell-item-form {
-            display: none;
-            margin-top: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-
-        #sell-item-form h3 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        #sell-item-form label {
-            font-size: 14px;
-            color: #333;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        #sell-item-form input,
-        #sell-item-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-size: 14px;
-        }
-
-        #sell-item-form button {
-            background-color: #54b942;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #sell-item-form button:hover {
-            background-color: #3a8f2a;
-        }
-
-        /* Hidden Class to Hide Elements */
-        .hidden {
-            display: none;
         }
 
         /* Popup Styles */
@@ -230,91 +175,59 @@
     <main>
         <section id="materials-marketplace" class="feature-section">
             <h2>Materials Marketplace</h2>
-            <p>Buy or sell sustainable materials easily.</p>
+            <p>Buy sustainable materials easily.</p>
             
             <div id="marketplace-content" class="marketplace-grid">
-                <!-- Example Item 1 -->
+                <!-- Example Items -->
                 <div class="marketplace-item">
                     <img src="photo/Bottle Caps.jpg" alt="Bottle Caps" />
                     <h3>Bottle Caps</h3>
                     <p>₱5.00</p>
                     <button class="buy-button" onclick="showPopup('Bought Bottle Caps!')">Buy Now</button>
-                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
                 
-                <!-- Example Item 2 -->
                 <div class="marketplace-item">
-                    <img src="photo/colourful-fabric.webp" alt="colourful-fabric" />
-                    <h3>colourful-fabric</h3>
+                    <img src="photo/colourful-fabric.webp" alt="Colourful Fabric" />
+                    <h3>Colourful Fabric</h3>
                     <p>₱10.00</p>
                     <button class="buy-button" onclick="showPopup('Bought Colourful Fabric!')">Buy Now</button>
-                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
-                
-                <!-- Example Item 3 -->
+
                 <div class="marketplace-item">
-                    <img src="photo/old-electronics.webp" alt="old-electronics" />
-                    <h3>old-electronics</h3>
+                    <img src="photo/old-electronics.webp" alt="Old Electronics" />
+                    <h3>Old Electronics</h3>
                     <p>₱50.00</p>
                     <button class="buy-button" onclick="showPopup('Bought Old Electronics!')">Buy Now</button>
-                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
 
-                <!-- Example Item 4 -->
                 <div class="marketplace-item">
-                    <img src="photo/reclaimed-timber.jpeg" alt="reclaimed-timber" />
-                    <h3>reclaimed-timber</h3>
+                    <img src="photo/reclaimed-timber.jpeg" alt="Reclaimed Timber" />
+                    <h3>Reclaimed Timber</h3>
                     <p>₱250.00</p>
                     <button class="buy-button" onclick="showPopup('Bought Reclaimed Timber!')">Buy Now</button>
-                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
 
-                <!-- Example Item 5 -->
                 <div class="marketplace-item">
-                    <img src="photo/Scrap metal.webp" alt="Scrap metal" />
+                    <img src="photo/Scrap metal.webp" alt="Scrap Metal" />
                     <h3>Scrap Metal</h3>
                     <p>₱150.00</p>
                     <button class="buy-button" onclick="showPopup('Bought Scrap Metal!')">Buy Now</button>
-                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
 
-                <!-- Example Item 6 -->
                 <div class="marketplace-item">
                     <img src="photo/Wood Offcuts.webp" alt="Wood Offcuts" />
-                    <h3>Wood offcuts</h3>
+                    <h3>Wood Offcuts</h3>
                     <p>₱125.00</p>
                     <button class="buy-button" onclick="showPopup('Bought Wood Offcuts!')">Buy Now</button>
-                    <button class="sell-button" onclick="showPopup('The Product has already been sold!')">Sell</button>
                 </div>
-            </div>
-            
-            <!-- Form to sell an item (hidden by default) -->
-            <div id="sell-item-form" class="hidden">
-                <h3>Sell Your Item</h3>
-                <form action="/submit-item" method="post" enctype="multipart/form-data">
-                    <label for="item-name">Item Name:</label>
-                    <input type="text" id="item-name" name="item-name" required />
-        
-                    <label for="item-price">Price ($):</label>
-                    <input type="number" id="item-price" name="item-price" step="0.01" required />
-        
-                    <label for="item-photo">Upload Photo:</label>
-                    <input type="file" id="item-photo" name="item-photo" accept="image/*" required />
-        
-                    <label for="item-description">Description:</label>
-                    <textarea id="item-description" name="item-description" rows="4" required></textarea>
-        
-                    <button type="submit">Submit Item</button>
-                </form>
             </div>
         </section>
     </main>
 
-    <!-- Popup for Buy Now or Sell Similar -->
+    <!-- Popup for Buy Now -->
     <div id="popup" class="popup"></div>
 
     <script>
-        // Function to show popup with message
         function showPopup(message) {
             const popup = document.getElementById('popup');
             popup.textContent = message;
@@ -322,16 +235,6 @@
             setTimeout(() => {
                 popup.classList.remove('active');
             }, 2000); // Hide popup after 2 seconds
-        }
-
-        // Function to toggle visibility of the sell item form
-        function toggleSellForm() {
-            const sellForm = document.getElementById('sell-item-form');
-            if (sellForm.classList.contains('hidden')) {
-                sellForm.classList.remove('hidden');
-            } else {
-                sellForm.classList.add('hidden');
-            }
         }
     </script>
 </body>
