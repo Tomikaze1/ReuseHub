@@ -286,12 +286,13 @@ margin: 20px;
 flex: 1 1 auto;
 border-radius: 5%;
 box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+border: 1px solid #1e1e1e;
 }
 
 .card-image {
   height: 200px; 
   overflow: hidden; 
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .card-image img {
@@ -319,22 +320,14 @@ text-decoration: none;
 color: navy;
 }
 
-/* Footer Section */
 footer {
-background-color: #679E45;
-width: 100%;
-padding: 30px 40px;
-}
-
-footer .content {
-max-width: 1250px;
-margin: auto;
-}
-
-footer .content .top {
-display: flex;
-align-items: center;
-justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ccc;
+  color: #333;
+  font-size: 0.9em;
 }
 
 .content .top .logo-details {
