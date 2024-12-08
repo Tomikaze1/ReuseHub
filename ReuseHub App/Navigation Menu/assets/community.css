@@ -121,11 +121,11 @@ section {
   margin: 20px auto;
   padding: 20px;
   max-width: 900px;
-  background: rgba(183, 251, 198, 0.9);
+  background: rgba(187, 246, 200, 0.9);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid #1e1e1e;
 }
 
 /* Section Headers */
@@ -138,14 +138,14 @@ section h2 {
 section p,
 section ul li {
   font-size: 18px;
-  color: #666;
+  color: #191818;
   line-height: 1.6;
 }
 
 /* Event Dates */
 .event-date {
   font-size: 16px;
-  color: #888;
+  color: #2e423a;
   font-style: italic;
 }
 
