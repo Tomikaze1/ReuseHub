@@ -46,3 +46,12 @@ setTimeout(() => {
 //window.addEventListener("load", () => {
   //renderCard();
 //});
+
+function toggleMenu() {
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  dropdownMenu.style.display = dropdownMenu.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function logOut() {
+  window.location.href = 'login.html';
+}
