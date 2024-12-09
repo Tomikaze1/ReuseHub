@@ -127,13 +127,13 @@
 </head>
 <body>
     <header>
-        <a href="index.html">Back to Home</a>
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <div class="menu-dropdown" id="menuDropdown">
-            <a href="diy-tutorials.html" target="_blank">DIY Tutorial</a>
-            <a href="local-makers.html" target="_blank">Local Makers</a>
-            <a href="materials-marketplace.html" target="_blank">Material Marketplace</a>
-            <a href="sus-score.html" target="_blank">Sustainability Score</a>
+            <a href="index.html"> Home</a>
+            <a href="diy-tutorials.html" >DIY Tutorial</a>
+            <a href="local-makers.html" >Local Makers</a>
+            <a href="materials-marketplace.html">Material Marketplace</a>
+            <a href="sus-score.html" >Sustainability Score</a>
         </div>
     </header>
 
@@ -163,13 +163,9 @@
     </main>
 
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menuDropdown");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
+       function toggleMenu() {
+            var menu = document.getElementById("menuDropdown");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
     </script>
 </body>

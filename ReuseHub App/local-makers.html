@@ -40,9 +40,10 @@
             font-size: 18px;
             font-weight: bold;
             padding: 10px 20px;
-            border-radius: 50px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            z-index: 1000; /* Keep the button in front */
         }
 
         .menu-button:hover {
@@ -51,28 +52,33 @@
 
         /* Dropdown Menu Styles */
         .dropdown {
-            position: absolute;
-            top: 60px; /* Adjust the position to show below the button */
-            right: 20px;
-            background-color: #54b942;;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            min-width: 160px;
             display: none;
-            z-index: 1;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #54b942;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            z-index: 1000;
         }
 
         .dropdown a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
             display: block;
-            border-bottom: 1px solid #3a872d;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
         .dropdown a:hover {
-            background-color: #54b942;;
+            background-color: #1c5f10;
         }
 
+        
         /* Back to Home Button Styles */
         .back-button {
             display: inline-block;
@@ -190,17 +196,29 @@
                 grid-template-columns: 1fr; 
             }
         }
+
+        /* Slide down animation */
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="back-button">Back to Home</a>
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <div class="dropdown" id="menuDropdown">
+            <a href="index.html">Home</a>
             <a href="diy-tutorials.html">DIY Tutorials</a>
             <a href="materials-marketplace.html">Materials Marketplace</a>
             <a href="sus-score.html">Sustainability Score</a>
-            <a href="project-gallery.html">project gallery</a>
+            <a href="project-gallery.html">Project Gallery</a>
         </div>
     </header>
 

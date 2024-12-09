@@ -18,8 +18,8 @@
             color: #333;
         }
         @font-face {
-        font-family: 'CustomFont'; 
-        src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
+            font-family: 'CustomFont'; 
+            src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
         }
 
         header {
@@ -42,6 +42,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            z-index: 1000; /* Keep the button in front */
         }
 
         .menu-button:hover {
@@ -57,15 +58,22 @@
             background-color: #54b942;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideDown 0.3s ease-in-out; /* Smooth animation */
         }
 
         .dropdown a {
             display: block;
-            padding: 10px 20px;
+            padding: 15px 20px;
             color: white;
             text-decoration: none;
             font-weight: bold;
             border-bottom: 1px solid #3a872d;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none; /* Remove border from the last item */
         }
 
         .dropdown a:hover {
@@ -75,29 +83,19 @@
         /* Show the dropdown when the menu button is clicked */
         .menu-button.active + .dropdown {
             display: block;
+            animation: slideDown 0.3s ease-in-out; /* Smooth animation */
         }
 
-        /* Back to Home Button Styles */
-        .back-button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #fff;
-            background-color: #54b942;
-            border: 2px solid #54b942;
-            border-radius: 50px;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease-in-out;
-            cursor: pointer;
-        }
-
-        .back-button:hover {
-            background-color: #3a872d;
-            border-color: #3a872d;
+        /* Slide down animation */
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Main Content */
@@ -187,20 +185,19 @@
                 width: 90%;
             }
         }
-        
     </style>    
 </head>
 <body>
     <header>
-        <a href="index.html" class="back-button">Back to Home</a>
         <!-- Menu Button -->
         <button class="menu-button">Menu</button>
         <!-- Dropdown Menu -->
         <div class="dropdown">
+            <a href="index.html" class="back-button">Home</a>
             <a href="local-makers.html">Local Makers</a>
             <a href="materials-marketplace.html">Materials Marketplace</a>
             <a href="sus-score.html">Sustainability Score</a>
-            <a href="project-gallery.html">project gallery</a>
+            <a href="project-gallery.html">Project Gallery</a>
         </div>
     </header>
     <main>
@@ -219,7 +216,7 @@
                     <p class="title">Waste CardBoard House Making Ideas</p>
                     <p class="description">Learn how to creatively reuse cardboard to make stunning DIY houses.<br><br>
                         Materials:<br>
-                        Cardboard, glue sticks, fevi quick, sun board, white acrelic Wall putti , acrelic colour, light.</p>
+                        Cardboard, glue sticks, fevi quick, sun board, white acrylic wall putty, acrylic color, light.</p>
                 </div>
                 <!-- Video 2 -->
                 <div class="video-item" id="video2" data-title="Boil an old CD for 3 minutes">
@@ -230,10 +227,7 @@
                     <p class="title">Boil an old CD for 3 minutes</p>
                     <p class="description">Transform old CDs into beautiful home decor with this simple boiling trick.
                         <br><br>The ingredients used in the video:<br>
-                        Old cd.
-                        Ribbon.
-                        Glue gun.
-                        </p>
+                        Old CD, Ribbon, Glue gun.</p>
                 </div>
                 <!-- Video 3 -->
                 <div class="video-item" id="video3" data-title="Plastic Bottle Flower Vase">
@@ -243,13 +237,7 @@
                     </video>
                     <p class="title">Plastic Bottle Flower Vase</p>
                     <p class="description">Easy Plastic bottle Flower vase making at home.<br><br>
-                        Materials :
-                        1. Plastic bottle
-                        2. Balloon
-                        3. Glue gun
-                        4. White cement +pop (1:1)
-                        5. Acrylic color
-                        6. Clear varnish</p>
+                        Materials: Plastic bottle, Balloon, Glue gun, White cement +pop (1:1), Acrylic color, Clear varnish</p>
                 </div>
                 <!-- Video 4 -->
                 <div class="video-item" id="video4" data-title="DIY: Simple Origami Fish - Paper Craft Tutorial">
@@ -258,8 +246,7 @@
                         Your browser does not support the video tag.
                     </video>
                     <p class="title">DIY: Simple Origami Fish - Paper Craft Tutorial</p>
-                    <p class="description">Check this video on how to make this easy Origami Fish.<br><br>
-                    Material: Paper</p>
+                    <p class="description">Check this video on how to make this easy Origami Fish.<br><br>Material: Paper</p>
                 </div>
                 <!-- Video 5 -->
                 <div class="video-item" id="video5" data-title="How To Make a Plastic Bottle Hand Fan">
@@ -268,8 +255,8 @@
                         Your browser does not support the video tag.
                     </video>
                     <p class="title">How To Make a Plastic Bottle Hand Fan</p>
-                    <p class="description">Check this Fan without Electricity <br><br>
-                    Materials: IceCream Sticks, ToothPick, Hotglue, Plastic Bottle.</p>
+                    <p class="description">Check this Fan without Electricity<br><br>
+                    Materials: Ice Cream Sticks, Tooth Pick, Hotglue, Plastic Bottle.</p>
                 </div>
                 <!-- Video 6 -->
                 <div class="video-item" id="video6" data-title="How to make a Sand Clock">
@@ -279,22 +266,7 @@
                     </video>
                     <p class="title">How to make a Sand Clock</p>
                     <p class="description">Learn how to make Hourglass with Plastic Bottle.<br><br>
-                    Materials: 
-                     Plastic bottles, Cutter, 
-                     Scissors, 
-                     Marker, 
-                     Screw Driver, 
-                     Epoxy, 
-                     Ruler, 
-                     Pencil, 
-                     Compass, 
-                     Cardboard (Carton box), 
-                     Sand, 
-                     Blue color liquid (E.g. Fabric Conditioner), 
-                     Color paper, 
-                     Stick, 
-                     Glue, 
-                     Colored paper strips.</p>
+                    Materials: Plastic bottles, Cutter, Scissors, Marker, Screw Driver, Epoxy, Ruler, Pencil, Compass, Cardboard, Sand, Colored Paper.</p>
                 </div>
             </div>
         </section>
@@ -303,6 +275,8 @@
         // Toggle the dropdown menu
         document.querySelector('.menu-button').addEventListener('click', function() {
             this.classList.toggle('active');
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         });
 
         // JavaScript for search functionality
