@@ -57,9 +57,15 @@ header {
 .logo {
   width: 320px;
   height: 220px;
-  background: url('../Photo/2.png') no-repeat center center / contain; 
   margin-bottom: 1px;
   margin-top: 10;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Menu Button */
