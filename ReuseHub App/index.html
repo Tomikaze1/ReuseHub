@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <nav class="top-menu">
             <a href="./Navigation Menu/Dashboard.html">Dashboard</a>
             <a href="./Navigation Menu/Community.html">Community</a>
@@ -15,10 +16,6 @@
             <a href="./Navigation Menu/Services.html">Services</a>
             <a href="./Navigation Menu/About.html">About Us</a>
         </nav>
-        <div class="header-content">
-            <div class="logo" aria-label="ReuseHub Logo"></div>
-        </div>
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <nav class="dropdown-menu" id="dropdownMenu">
             <a href="#home" onclick="logOut()">Log Out</a>
         </nav>
@@ -26,6 +23,7 @@
 
     <main>
         <div class="main-content-row">
+            <!-- Feature Cards -->
             <a href="diy-tutorials.html" class="feature-card">
                 <div class="icon">
                     <img src="photo/3.png" alt="DIY Tutorials Logo" />
@@ -57,27 +55,11 @@
                 <p>Sustainability Score</p>
             </a>
         </div>
-
-        <section id="contact" class="feature-section">
-            <h2>Contact</h2>
-            <p>Contact details for ReuseHub.</p>
-        </section>
-
-        <section id="services" class="feature-section">
-            <h2>Services</h2>
-            <p>Details of the services offered by ReuseHub.</p>
-        </section>
-
-        <section id="about" class="feature-section">
-            <h2>About</h2>
-            <p>Information about ReuseHub.</p>
-        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 ReuseHub. All rights reserved.</p>
     </footer>
-
     <script src="Assets/script.js"></script>
 </body>
 </html>

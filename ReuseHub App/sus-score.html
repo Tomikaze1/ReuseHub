@@ -44,6 +44,52 @@
             border-color: #3a872d;
         }
 
+        /* Menu Button Styles */
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #54b942;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #3a872d;
+        }
+
+        /* Dropdown Menu Styles */
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #54b942;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            z-index: 1000;
+        }
+
+        .menu-dropdown a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu-dropdown a:hover {
+            background-color: #3a872d;
+        }
+
         /* Sustainability Score Section */
         #sustainability-score {
             text-align: center;
@@ -77,33 +123,20 @@
             font-size: 18px;
             margin: 5px 0;
         }
-
-        /* Activities List */
-        #activity-list {
-            margin-top: 40px;
-        }
-
-        #activity-list h3 {
-            font-size: 24px;
-            color: #333;
-        }
-
-        #activities {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #activities li {
-            font-size: 16px;
-            margin: 5px 0;
-            color: #666;
-        }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html">Back to Home</a>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div class="menu-dropdown" id="menuDropdown">
+            <a href="diy-tutorials.html" target="_blank">DIY Tutorial</a>
+            <a href="local-makers.html" target="_blank">Local Makers</a>
+            <a href="materials-marketplace.html" target="_blank">Material Marketplace</a>
+            <a href="sus-score.html" target="_blank">Sustainability Score</a>
+        </div>
     </header>
+
     <main>
         <section id="sustainability-score" class="feature-section">
             <h2>Sustainability Score</h2>
@@ -123,4 +156,21 @@
             <div id="activity-list">
                 <h3>Your Recent Activities</h3>
                 <ul id="activities">
-                    <!-- User a
+                    <!-- User activity list here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menuDropdown");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

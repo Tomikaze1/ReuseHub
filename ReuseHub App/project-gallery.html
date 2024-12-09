@@ -9,8 +9,8 @@
         @font-face {
             font-family: 'CustomFont'; 
             src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
-        
         }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -26,6 +26,7 @@
         header {
             text-align: center;
             margin-top: 20px;
+            position: relative;
         }
 
         header a {
@@ -45,6 +46,55 @@
         header a:hover {
             background-color: #3a872d;
             border-color: #3a872d;
+        }
+
+        /* Menu Button Styles */
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #54b942;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #3a872d;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            display: none;
+            background-color: #54b942;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid #3a872d;
+        }
+
+        .dropdown a:hover {
+            background-color: #3a872d;
+        }
+
+        /* Show the dropdown when the menu button is clicked */
+        .dropdown.active {
+            display: block;
         }
 
         /* Gallery Section */
@@ -130,8 +180,18 @@
 </head>
 <body>
     <header>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <a href="index.html">Back to Home</a>
     </header>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown" id="menuDropdown">
+        <a href="diy-tutorial.html">DIY Tutorials</a>
+        <a href="local-makers.html">Local Makers</a>
+        <a href="materials-marketplace.html">Materials Marketplace</a>
+        <a href="sus-score.html">Sustainability Score</a>
+    </div>
+
     <main>
         <h2>Project Gallery</h2>
         <section id="project-gallery">
@@ -176,6 +236,12 @@
             currentCount = button.classList.contains("liked") ? currentCount - 1 : currentCount + 1;
             likeCountElement.textContent = currentCount;
             button.classList.toggle("liked");
+        }
+
+        // Toggle dropdown menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            menu.classList.toggle('active');
         }
     </script>
 </body>

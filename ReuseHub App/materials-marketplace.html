@@ -67,6 +67,58 @@
             border-color: #3a872d;
         }
 
+        /* Menu Button Styles */
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #54b942;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #3a872d;
+        }
+
+        /* Dropdown Menu Styles */
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .menu-dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-dropdown a:hover {
+            background-color: #54b942;
+            color: #fff;
+        }
+
+        /* Show menu when active */
+        .menu-dropdown.active {
+            display: block;
+        }
+
         /* Marketplace Section */
         #materials-marketplace {
             text-align: center;
@@ -174,6 +226,13 @@
 <body>
     <header>
         <a href="index.html">Back to Home</a>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div id="menuDropdown" class="menu-dropdown">
+            <a href="diy-tutorial.html">DIY Tutorial</a>
+            <a href="local-makers.html">Local Makers</a>
+            <a href="project-gallery.html">project gallery</a>
+            <a href="sus-score.html">Sustainability Score</a>
+        </div>
     </header>
     <main>
         <section id="materials-marketplace" class="feature-section">
@@ -226,18 +285,25 @@
             </div>
         </section>
     </main>
-
-    <!-- Popup for Buy Now -->
-    <div id="popup" class="popup"></div>
+    <!-- Popup Notification -->
+    <div id="popup" class="popup">
+        <p id="popupMessage"></p>
+    </div>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            menu.classList.toggle('active');
+        }
+
         function showPopup(message) {
             const popup = document.getElementById('popup');
-            popup.textContent = message;
+            const popupMessage = document.getElementById('popupMessage');
+            popupMessage.textContent = message;
             popup.classList.add('active');
             setTimeout(() => {
                 popup.classList.remove('active');
-            }, 2000); // Hide popup after 2 seconds
+            }, 2000);
         }
     </script>
 </body>

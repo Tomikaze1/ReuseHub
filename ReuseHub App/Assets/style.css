@@ -19,6 +19,7 @@ body {
 }
 
 /* Header Styles */
+/* Header Styles */
 header {
   display: flex;
   flex-direction: column; 
@@ -62,56 +63,56 @@ header {
 }
 
 /* Menu Button */
-.menu-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #45a049; 
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+  .menu-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #45a049; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
 
-.menu-button:hover {
-  background-color: #1d6121;
-}
+  .menu-button:hover {
+    background-color: #1d6121;
+  }
 
-/* Dropdown Menu */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 50px;
-  right: 20px;
-  background-color: #89df8e;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  width: 150px;
-}
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #89df8e;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px;
+  }
 
-.dropdown-menu a {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  padding: 10px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+  .dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
 
-.dropdown-menu a:hover {
-  background-color: #000000;
-  color: #fff;
-}
+  .dropdown-menu a:hover {
+    background-color: #000000;
+    color: #fff;
+  }
 
-/* Show Dropdown Menu */
-.dropdown-menu.show {
-  display: block;
-}
+  /* Show Dropdown Menu */
+  .dropdown-menu.show {
+    display: block;
+  }
 
 /* Feature Card Styles */
 .feature-card {
@@ -216,5 +217,3 @@ footer {
   display: flex;
   gap: 1em;
 }
-
-
