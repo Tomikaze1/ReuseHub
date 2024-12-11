@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ h1 {
   letter-spacing: 5px;
 }
 
-/* Navigation Menu */
+
 .top-menu {
   display: flex;
   justify-content: center;
@@ -80,7 +80,7 @@ h1 {
   background-color: #1d6121;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -93,10 +93,10 @@ h1 {
   z-index: 1000;
   width: 150px;
 }
-/* Import Font */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* Basic Reset */
+
 * {
 margin: 0;
 padding: 0;
@@ -120,7 +120,7 @@ font-family: 'CustomFont';
 src: url('./Atop-R99O3.ttf') format('truetype'); 
 }
 
-/* Header Styles */
+
 header {
 display: flex;
 flex-direction: column;
@@ -145,7 +145,7 @@ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 letter-spacing: 3px;
 }
 
-/* Navigation Menu */
+
 .top-menu {
 display: flex;
 justify-content: center;
@@ -166,7 +166,7 @@ transition: color 0.3s ease;
 color: #45a049;
 }
 
-/* Menu Button */
+
 .menu-button {
 position: absolute;
 top: 10px;
@@ -185,7 +185,7 @@ transition: background 0.3s;
 background-color: #1d6121;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
 display: none;
 position: absolute;
@@ -213,19 +213,19 @@ background-color: #000000;
 color: #fff;
 }
 
-/* Show Dropdown Menu */
+
 .dropdown-menu.show {
 display: block;
 }
 
-/* Company Section */
+
 .company {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 2rem 0;}
 
-/* Updated company-info */
+
 .company-info {
   display: flex;
   flex-direction: column;
@@ -257,7 +257,7 @@ display: block;
   width: 100%;
 }
 
-/* Team Section */
+
 .team {
 display: flex;
 justify-content: center;
@@ -269,7 +269,7 @@ font-weight: bold;
 border-bottom: 4px solid #89df8e;
 }
 
-/* Card Section */
+
 .container {
 min-height: 80vh;
 display: flex;
@@ -354,7 +354,7 @@ color: #89df8e;
 background: #fff;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 900px) {
 .company-info {
   margin: 0 1rem;
@@ -391,7 +391,7 @@ footer .content .top .media-icons {
   color: #fff;
 }
 
-/* Show Dropdown Menu */
+
 .dropdown-menu.show {
   display: block;
 } 

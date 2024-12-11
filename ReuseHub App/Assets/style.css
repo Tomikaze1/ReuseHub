@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Body Styling */
+
 body {
   display: flex;
   flex-direction: column;
@@ -18,8 +18,8 @@ body {
   color: #333;
 }
 
-/* Header Styles */
-/* Header Styles */
+
+
 header {
   display: flex;
   flex-direction: column; 
@@ -32,12 +32,12 @@ header {
   background-color: transparent; 
 }
 
-/* Top Menu */
+
 .top-menu {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Spacing between links */
-  margin-bottom: 2px; /* Space between menu and logo */
+  gap: 20px; 
+  margin-bottom: 2px; 
 }
 
 .top-menu a {
@@ -50,10 +50,10 @@ header {
 }
 
 .top-menu a:hover {
-  color: #45a049; /* Highlight color on hover */
+  color: #45a049; 
 }
 
-/* Logo */
+
 .logo {
   width: 320px;
   height: 220px;
@@ -62,7 +62,7 @@ header {
   margin-top: 10;
 }
 
-/* Menu Button */
+
   .menu-button {
     position: absolute;
     top: 10px;
@@ -81,7 +81,7 @@ header {
     background-color: #1d6121;
   }
 
-  /* Dropdown Menu */
+  
   .dropdown-menu {
     display: none;
     position: absolute;
@@ -109,12 +109,12 @@ header {
     color: #fff;
   }
 
-  /* Show Dropdown Menu */
+  
   .dropdown-menu.show {
     display: block;
   }
 
-/* Feature Card Styles */
+
 .feature-card {
   text-align: center;
   text-decoration: none;
@@ -139,7 +139,7 @@ header {
   margin-bottom: 5px;
 }
 
-/* Main Content Row */
+
 .main-content-row {
   display: flex;
   justify-content: space-around;
@@ -149,20 +149,20 @@ header {
   padding-top: 200px;
 }
 
-/* Section Styling */
+
 .feature-section {
   padding: 2em;
   max-width: 800px;
   margin: 2em auto;
-  display: none; /* Initially hidden */
+  display: none; 
   text-align: center;
 }
 
 .feature-section:target {
-  display: block; /* Show when navigated */
+  display: block; 
 }
 
-/* Footer */
+
 footer {
   text-align: center;
   padding: 1em;
@@ -174,7 +174,7 @@ footer {
   left: 0;
 }
 
-/* Modal */
+
 .modal {
   display: none;
   position: fixed;
@@ -203,7 +203,7 @@ footer {
   cursor: pointer;
 }
 
-/* Dashboard, Forum, and Gamification */
+
 .dashboard-content {
   display: flex;
   gap: 1em;

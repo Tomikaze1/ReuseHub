@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery</title>
     <style>
-        /* General Styles */
+      
         @font-face {
             font-family: 'CustomFont'; 
             src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
@@ -48,7 +48,7 @@
             border-color: #3a872d;
         }
 
-        /* Menu Button Styles */
+       
         .menu-button {
             position: absolute;
             top: 20px;
@@ -68,7 +68,7 @@
             background-color: #3a872d;
         }
 
-        /* Dropdown Menu Styles */
+        
         .dropdown {
             position: absolute;
             top: 60px;
@@ -92,12 +92,11 @@
             background-color: #3a872d;
         }
 
-        /* Show the dropdown when the menu button is clicked */
+      
         .dropdown.active {
             display: block;
         }
 
-        /* Gallery Section */
         h2 {
             font-family: 'CustomFont', Arial, sans-serif;
             text-align: center;
@@ -108,7 +107,7 @@
 
         #project-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-columns: repeat(3, 1fr); 
             gap: 30px;
             margin: 40px auto;
             padding: 0 20px;
@@ -139,7 +138,7 @@
         }
 
         .gallery-item img[alt=""] {
-            content: url('placeholder-image.jpg'); /* Add a placeholder image file here */
+            content: url('placeholder-image.jpg'); 
         }
 
         .gallery-item-info {
@@ -183,7 +182,7 @@
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
     </header>
 
-    <!-- Dropdown Menu -->
+    
     <div class="dropdown" id="menuDropdown">
         <a href="index.html">Home</a>
         <a href="diy-tutorials.html">DIY Tutorials</a>
@@ -195,12 +194,12 @@
     <main>
         <h2>Project Gallery</h2>
         <section id="project-gallery">
-            <!-- Gallery Items will be dynamically inserted here -->
+            
         </section>
     </main>
 
     <script>
-        // Example project data
+     
         const projects = [
             { id: 1, title: "Upcycled Chair", image: "photo/Upcycled Chair.jpg", likes: 0 },
             { id: 2, title: "Repurposed Lamp", image: "photo/Upcycled Lamp.jpg", likes: 0 },
@@ -212,7 +211,7 @@
 
         const gallery = document.getElementById("project-gallery");
 
-        // Dynamically load gallery items
+        
         projects.forEach(project => {
             const galleryItem = document.createElement("div");
             galleryItem.classList.add("gallery-item");
@@ -229,7 +228,7 @@
             gallery.appendChild(galleryItem);
         });
 
-        // JavaScript to toggle like count
+        
         function toggleLike(button) {
             const likeCountElement = button.querySelector(".like-count");
             let currentCount = parseInt(likeCountElement.textContent);
@@ -238,7 +237,6 @@
             button.classList.toggle("liked");
         }
 
-        // Toggle dropdown menu visibility
         function toggleMenu() {
             const menu = document.getElementById('menuDropdown');
             menu.classList.toggle('active');

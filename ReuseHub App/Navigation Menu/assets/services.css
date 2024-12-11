@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ body {
     letter-spacing: 5px;
   }
   
-  /* Navigation Menu */
+  
   .top-menu {
     display: flex;
     justify-content: center;
@@ -84,7 +84,7 @@ body {
     background-color: #1d6121;
   }
   
-  /* Dropdown Menu */
+  
   .dropdown-menu {
     display: none;
     position: absolute;
@@ -112,12 +112,12 @@ body {
     color: #fff;
   }
   
-  /* Show Dropdown Menu */
+  
   .dropdown-menu.show {
     display: block;
   }
 
-  /* Service Sections */
+  
 .service-section {
   background-color: rgba(175, 251, 199, 0.9);
   padding: 20px;
@@ -142,7 +142,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Add responsive design for smaller screens */
+
 @media (max-width: 768px) {
   .service-section {
       width: 95%;

@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +44,7 @@ h1 {
   letter-spacing: 5px;
 }
 
-/* Navigation Menu */
+
 .top-menu {
   display: flex;
   justify-content: center;
@@ -83,7 +83,7 @@ h1 {
   background-color: #1d6121;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -111,12 +111,12 @@ h1 {
   color: #fff;
 }
 
-/* Show Dropdown Menu */
+
 .dropdown-menu.show {
   display: block;
 }
 
-/* Section Containers */
+
 section {
   margin: 20px auto;
   padding: 20px;
@@ -128,7 +128,7 @@ section {
   border: 1px solid #1e1e1e;
 }
 
-/* Section Headers */
+
 section h2 {
   font-size: 30px;
   color: #54b942;
@@ -142,14 +142,14 @@ section ul li {
   line-height: 1.6;
 }
 
-/* Event Dates */
+
 .event-date {
   font-size: 16px;
   color: #2e423a;
   font-style: italic;
 }
 
-/* Join Button */
+
 .join-button {
   padding: 10px 20px;
   font-size: 16px;
@@ -165,7 +165,7 @@ section ul li {
   background-color: #1d6121;
 }
 
-/* Footer */
+
 footer {
   width: 100%;
   text-align: center;

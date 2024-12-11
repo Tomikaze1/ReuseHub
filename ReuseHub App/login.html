@@ -22,9 +22,9 @@
         }
 
         .logo img {
-            width: 30%; /* Scales based on the viewport width */
-            max-width: 300px; /* Limits the size on larger screens */
-            height: auto; /* Maintains aspect ratio */
+            width: 30%; 
+            max-width: 300px; 
+            height: auto; 
         }
 
         main {
@@ -35,7 +35,7 @@
         }
 
         .form-container {
-            background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+            background: rgba(255, 255, 255, 0.6); 
             padding: 30px; 
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@
         }
 
         .tabs button {
-            background-color: rgba(102, 255, 102, 0.9); /* Light green background */
+            background-color: rgba(102, 255, 102, 0.9); 
             color: white;
             border: none;
             padding: 15px 25px;
@@ -87,10 +87,9 @@
             border-radius: 5px;
         }
 
-        /* Apply the animation class to all buttons */
         button[type="submit"] {
             padding: 10px;
-            background-color: rgba(102, 255, 102, 0.9); /* Light green background */
+            background-color: rgba(102, 255, 102, 0.9); 
             color: white;
             border: none;
             border-radius: 5px;
@@ -104,9 +103,9 @@
             background-color: rgba(76, 175, 80, 0.95);
         }
 
-        /* Button animation class */
+        
         .btn-13 {
-            background-color: #a8e9a1; /* Lighter green */
+            background-color: #a8e9a1; 
             background-image: linear-gradient(315deg, #a8e9a1 0%, #6bcf6b 74%);
             border: none;
             z-index: 1;
@@ -158,7 +157,7 @@
 </head>
 <body>
     <header>
-        <!-- Single logo image here -->
+        
         <div class="logo">
             <img src="Photo/2.png" alt="ReuseHub Logo">
         </div>
@@ -171,7 +170,7 @@
                 <button id="registerTab" class="btn-13" onclick="switchTab('registerForm')">Register</button>
             </div>
 
-            <!-- Login Form -->
+         
             <form id="loginForm" class="active">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -179,11 +178,11 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
 
-                <!-- Apply the animation class to the button -->
+        
                 <button type="submit" class="btn-13">Login</button>
             </form>
 
-            <!-- Registration Form -->
+           
             <form id="registerForm">
                 <label for="newUsername">Username:</label>
                 <input type="text" id="newUsername" name="newUsername" required>
@@ -197,7 +196,7 @@
                 <label for="confirmPassword">Confirm Password:</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-                <!-- Apply the animation class to the button -->
+            
                 <button type="submit" class="btn-13">Register</button>
             </form>
         </div>
@@ -221,7 +220,7 @@
                 window.location.href = 'login.html';
             });
 
-            // Switch tabs for login and register forms
+           
             window.switchTab = function(formId) {
                 document.querySelectorAll('form').forEach(form => {
                     form.classList.remove('active');
@@ -238,7 +237,7 @@
                 document.getElementById('registerForm').addEventListener('submit', function(event) {
                 event.preventDefault();
                 alert('Registration successful!');
-                window.location.href = 'index.html'; // Redirect to index.html after registration
+                window.location.href = 'index.html'; 
                 });
             }
         });

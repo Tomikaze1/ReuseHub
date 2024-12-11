@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,13 +17,13 @@ body {
     color: #333;
 }
 
-/* Font Import */
+
 @font-face {
     font-family: 'CustomFont'; 
     src: url('./Atop-R99O3.ttf') format('truetype'); 
 }
 
-/* Header Section */
+
 header {
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ h1 {
     letter-spacing: 5px;
 }
 
-/* Navigation Menu */
+
 .top-menu {
     display: flex;
     justify-content: flex-start;
@@ -68,7 +68,7 @@ h1 {
     color: #45a049; 
 }
 
-/* Main Content */
+
 main {
     margin-top: 10px;
     padding: 20px;
@@ -97,7 +97,7 @@ li {
     margin-bottom: 10px;
 }
 
-/* Footer */
+
 footer {
     background-color: transparent;
     color: rgb(0, 0, 0);

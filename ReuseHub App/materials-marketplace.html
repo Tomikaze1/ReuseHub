@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketplace</title>
     <style>
-        /* Global Styles */
+       
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('./Photo/1.png'); /* Set background image */
+            background-image: url('./Photo/1.png'); 
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -23,7 +23,7 @@
         src: url('./Fonts/Atop-R99O3.ttf') format('truetype'); 
         }
 
-        /* Header Styles */
+        
         header {
             text-align: center;
             margin-top: 20px;
@@ -67,7 +67,7 @@
             border-color: #3a872d;
         }
 
-        /* Menu Button Styles */
+        
         .menu-button {
             position: absolute;
             top: 20px;
@@ -87,7 +87,7 @@
             background-color: #3a872d;
         }
 
-        /* Dropdown Menu Styles */
+      
         .menu-dropdown {
             display: none;
             position: absolute;
@@ -113,12 +113,12 @@
             background-color: #54b942;
         }
 
-        /* Show menu when active */
+    
         .menu-dropdown.active {
             display: block;
         }
 
-        /* Marketplace Section */
+       
         #materials-marketplace {
             text-align: center;
             color: #333;
@@ -141,18 +141,18 @@
             margin-bottom: 20px;
         }
 
-        /* Marketplace Grid Layout */
+       
         #marketplace-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
-            grid-template-rows: repeat(2, auto);  /* 2 rows */
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(2, auto);  
             gap: 30px;
             margin: 40px auto;
             padding: 0 20px;
             max-width: 1200px;
         }
 
-        /* Marketplace Item Styles */
+        
         .marketplace-item {
             background: #d3fbcc; 
             border: 1px solid #343333;
@@ -164,7 +164,7 @@
         }
 
         .marketplace-item:hover {
-            background-color: #baf7ba; /* Slight green tint on hover */
+            background-color: #baf7ba;
         }
 
         .marketplace-item img {
@@ -203,7 +203,7 @@
             background-color: #3a8f2a;
         }
 
-        /* Popup Styles */
+        
         .popup {
             display: none;
             position: fixed;
@@ -239,7 +239,7 @@
             <p>Buy sustainable materials easily.</p>
             
             <div id="marketplace-content" class="marketplace-grid">
-                <!-- Example Items -->
+               
                 <div class="marketplace-item">
                     <img src="photo/Bottle Caps.jpg" alt="Bottle Caps" />
                     <h3>Bottle Caps</h3>
@@ -284,7 +284,7 @@
             </div>
         </section>
     </main>
-    <!-- Popup Notification -->
+    
     <div id="popup" class="popup">
         <p id="popupMessage"></p>
     </div>

@@ -8,7 +8,7 @@ const cardDescSpans = document.querySelectorAll(".card-description span");
 const mediaIcons = document.querySelectorAll(".card-mediaIcons a i");
 
 const renderCard = () => {
-  //Remove the skeleton loading effect
+  
   cardImages.forEach((cardImage) => {
     cardImage.classList.remove("loading");
   });
@@ -22,7 +22,7 @@ const renderCard = () => {
     cardMediaIcon.classList.remove("loading");
   });
 
-  //Show the hidden html elements
+  
   cardImgs.forEach((cardImg) => {
     cardImg.style.visibility = "visible";
   });
@@ -37,21 +37,21 @@ const renderCard = () => {
   });
 }
 
-//Execute renderCard on setTimeout
+
 setTimeout(() => {
   renderCard();
 }, 1000);
 
-//Execute renderCard after the page loaded
-//window.addEventListener("load", () => {
-  //renderCard();
-//});
+
+
+  
+
 
 function toggleMenu() {
-  const dropdownMenu = document.getElementById('dropdownMenu');
-  dropdownMenu.style.display = dropdownMenu.style.display === 'flex' ? 'none' : 'flex';
+  const dropdownMenu = document.getElementById("load");
+  dropdownMenu.style.display = dropdownMenu.style.display === 'dropdownMenu' ? 'flex' : 'none';
 }
 
 function logOut() {
-  window.location.href = 'login.html';
+  window.location.href = 'flex';
 }

@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +48,7 @@ main {
   margin: 0 auto;
 }
 
-/* Welcome Section */
+
 .welcome {
   margin-top: 10px;
   text-align: center;
@@ -68,7 +68,7 @@ main {
   font-style: italic;
 }
 
-/* Featured Guides */
+
 .featured-guides {
   margin-bottom: 40px;
 }
@@ -107,12 +107,12 @@ main {
 
 .guide h3 a {
   font-size: 1.2em;
-  color: #212321;  /* Green color for the link */
-  text-decoration: none;  /* Optional: removes the underline */
+  color: #212321;  
+  text-decoration: none;  
 }
 
 .guide h3 a:hover {
-  color: #3e8e41;  /* Darker green on hover */
+  color: #3e8e41;  
 }
 
 .guide p {
@@ -134,7 +134,7 @@ main {
   background-color: #3c8d31;
 }
 
-/* Navigation Menu */
+
 .top-menu {
   display: flex;
   justify-content: center;
@@ -173,7 +173,7 @@ main {
   background-color: #1d6121;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -201,11 +201,11 @@ main {
   color: #fff;
 }
 
-/* Show Dropdown Menu */
+
 .dropdown-menu.show {
   display: block;
 }
-/* Quick Links */
+
 .quick-links {
   margin-bottom: 40px;
 }
@@ -237,7 +237,7 @@ main {
   color: #3c8d31;
 }
 
-/* Quote Section */
+
 .quote {
   text-align: center;
   font-style: italic;
@@ -246,7 +246,7 @@ main {
   margin: 40px 0;
 }
 
-/* Footer */
+
 footer {
   width: 100%;
   text-align: center;
@@ -281,7 +281,7 @@ footer {
   background: #fff;
   }
   
-  /* Responsive Adjustments */
+  
   @media (max-width: 900px) {
   .company-info {
     margin: 0 1rem;

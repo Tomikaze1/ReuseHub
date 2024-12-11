@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIY Tutorials</title>
     <style>
-        /* Global Styles */
+     
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -28,7 +28,6 @@
             position: relative;
         }
 
-        /* Menu Button Styles */
         .menu-button {
             position: absolute;
             top: 20px;
@@ -42,14 +41,14 @@
             border-radius: 50px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            z-index: 1000; /* Keep the button in front */
+            z-index: 1000; 
         }
 
         .menu-button:hover {
             background-color: #3a872d;
         }
 
-        /* Dropdown Menu Styles */
+        
         .dropdown {
             position: absolute;
             top: 60px;
@@ -59,7 +58,7 @@
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            animation: slideDown 0.3s ease-in-out; /* Smooth animation */
+            animation: slideDown 0.3s ease-in-out; 
         }
 
         .dropdown a {
@@ -73,20 +72,18 @@
         }
 
         .dropdown a:last-child {
-            border-bottom: none; /* Remove border from the last item */
+            border-bottom: none; 
         }
 
         .dropdown a:hover {
             background-color: #3a872d;
         }
 
-        /* Show the dropdown when the menu button is clicked */
         .menu-button.active + .dropdown {
             display: block;
-            animation: slideDown 0.3s ease-in-out; /* Smooth animation */
+            animation: slideDown 0.3s ease-in-out; 
         }
 
-        /* Slide down animation */
         @keyframes slideDown {
             0% {
                 opacity: 0;
@@ -98,7 +95,7 @@
             }
         }
 
-        /* Main Content */
+       
         main {
             padding: 20px;
             max-width: 1200px;
@@ -116,7 +113,7 @@
             letter-spacing: 3px;
         }
 
-        /* Search Bar */
+        
         .search-container {
             display: flex;
             justify-content: center;
@@ -133,7 +130,7 @@
             font-size: 16px;
         }
 
-        /* Video Container */
+       
         #video-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -175,7 +172,7 @@
             text-align: justify;
         }
 
-        /* Responsive Design */
+       
         @media (max-width: 600px) {
             #video-container {
                 grid-template-columns: 1fr;
@@ -189,9 +186,9 @@
 </head>
 <body>
     <header>
-        <!-- Menu Button -->
+        
         <button class="menu-button">Menu</button>
-        <!-- Dropdown Menu -->
+        
         <div class="dropdown">
             <a href="index.html" class="back-button">Home</a>
             <a href="local-makers.html">Local Makers</a>
@@ -207,7 +204,7 @@
                 <input type="text" id="search-bar" placeholder="Search for tutorials..." />
             </div>
             <div id="video-container">
-                <!-- Video 1 -->
+                
                 <div class="video-item" id="video1" data-title="Waste CardBoard House Making Ideas">
                     <video controls>
                         <source src="Videos/1.mp4" type="video/mp4">
@@ -218,7 +215,7 @@
                         Materials:<br>
                         Cardboard, glue sticks, fevi quick, sun board, white acrylic wall putty, acrylic color, light.</p>
                 </div>
-                <!-- Video 2 -->
+                
                 <div class="video-item" id="video2" data-title="Boil an old CD for 3 minutes">
                     <video controls>
                         <source src="Videos/2.mp4" type="video/mp4">
@@ -229,7 +226,7 @@
                         <br><br>The ingredients used in the video:<br>
                         Old CD, Ribbon, Glue gun.</p>
                 </div>
-                <!-- Video 3 -->
+                
                 <div class="video-item" id="video3" data-title="Plastic Bottle Flower Vase">
                     <video controls>
                         <source src="Videos/3.mp4" type="video/mp4">
@@ -239,7 +236,7 @@
                     <p class="description">Easy Plastic bottle Flower vase making at home.<br><br>
                         Materials: Plastic bottle, Balloon, Glue gun, White cement +pop (1:1), Acrylic color, Clear varnish</p>
                 </div>
-                <!-- Video 4 -->
+                
                 <div class="video-item" id="video4" data-title="DIY: Simple Origami Fish - Paper Craft Tutorial">
                     <video controls>
                         <source src="Videos/4.mp4" type="video/mp4">
@@ -248,7 +245,7 @@
                     <p class="title">DIY: Simple Origami Fish - Paper Craft Tutorial</p>
                     <p class="description">Check this video on how to make this easy Origami Fish.<br><br>Material: Paper</p>
                 </div>
-                <!-- Video 5 -->
+                
                 <div class="video-item" id="video5" data-title="How To Make a Plastic Bottle Hand Fan">
                     <video controls>
                         <source src="Videos/5.mp4" type="video/mp4">
@@ -258,7 +255,7 @@
                     <p class="description">Check this Fan without Electricity<br><br>
                     Materials: Ice Cream Sticks, Tooth Pick, Hotglue, Plastic Bottle.</p>
                 </div>
-                <!-- Video 6 -->
+                
                 <div class="video-item" id="video6" data-title="How to make a Sand Clock">
                     <video controls>
                         <source src="Videos/6.mp4" type="video/mp4">
@@ -272,14 +269,13 @@
         </section>
     </main>
     <script>
-        // Toggle the dropdown menu
+     
         document.querySelector('.menu-button').addEventListener('click', function() {
             this.classList.toggle('active');
             const dropdown = document.querySelector('.dropdown');
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         });
 
-        // JavaScript for search functionality
         document.getElementById('search-bar').addEventListener('input', function () {
             var query = this.value.toLowerCase();
             var videos = document.querySelectorAll('.video-item');
