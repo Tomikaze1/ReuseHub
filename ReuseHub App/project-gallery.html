@@ -48,51 +48,55 @@
             border-color: #3a872d;
         }
 
-       
+        /* Menu Button Styles */
         .menu-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #54b942;
-            border: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #45a049; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-        .menu-button:hover {
-            background-color: #3a872d;
-        }
+.menu-button:hover {
+  background-color: #1d6121;
+}
 
         
         .dropdown {
+            display: none;
             position: absolute;
             top: 60px;
             right: 20px;
-            display: none;
             background-color: #54b942;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            z-index: 1000;
         }
 
         .dropdown a {
             display: block;
-            padding: 10px 20px;
-            color: white;
-            text-decoration: none;
+            padding: 10px;
             font-weight: bold;
-            border-radius: 10px;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            transition:  0.3s ease;
         }
 
         .dropdown a:hover {
-            background-color: #3a872d;
+            background-color: #1c5f10;
         }
 
-      
+        /* Show the dropdown when the menu button is clicked */
         .dropdown.active {
             display: block;
         }
@@ -241,6 +245,17 @@
             const menu = document.getElementById('menuDropdown');
             menu.classList.toggle('active');
         }
+
+        // Close the menu when clicking outside
+        document.addEventListener('click', (event) => {
+            const menu = document.getElementById('menuDropdown');
+            const button = document.querySelector('.menu-button');
+
+            // Check if the click is outside the dropdown or menu button
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>

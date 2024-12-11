@@ -19,57 +19,34 @@
         }
 
         header {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        header a {
-            padding: 15px 30px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #fff;
-            background-color: #54b942;
-            border: 2px solid #54b942;
-            border-radius: 50px;
-            text-decoration: none;
             position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease-in-out;
-            cursor: pointer;
         }
 
-        header a:hover {
-            background-color: #3a872d;
-            border-color: #3a872d;
-        }
-
-      
+        /* Menu Button Styles */
         .menu-button {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #54b942;
-            border: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
+            top: 10px;
+            right: 10px;
             padding: 10px 20px;
-            border-radius: 50px;
+            font-size: 1em;
+            background-color: #45a049; 
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background 0.3s;
         }
 
         .menu-button:hover {
-            background-color: #3a872d;
+            background-color: #1d6121;
         }
 
-        
+        /* Dropdown Menu Styles */
         .menu-dropdown {
             display: none;
             position: absolute;
-            top: 60px;
-            right: 20px;
+            top: 50px;
+            right: 10px;
             background-color: #54b942;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -77,17 +54,20 @@
             z-index: 1000;
         }
 
-        .menu-dropdown a {
+        #menuDropdown a {
             display: block;
             padding: 10px;
+            font-weight: bold;
             text-align: center;
             color: white;
+            border-radius: 30px;
             text-decoration: none;
             font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
-        .menu-dropdown a:hover {
-            background-color: #3a872d;
+        #menuDropdown a:hover {
+            background-color: #1c5f10;
         }
 
         
@@ -128,12 +108,12 @@
 <body>
     <header>
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
-        <div class="menu-dropdown" id="menuDropdown">
-            <a href="index.html"> Home</a>
-            <a href="diy-tutorials.html" >DIY Tutorial</a>
-            <a href="local-makers.html" >Local Makers</a>
+        <div id="menuDropdown">
+            <a href="index.html">Home</a>
+            <a href="diy-tutorials.html">DIY Tutorial</a>
+            <a href="local-makers.html">Local Makers</a>
             <a href="materials-marketplace.html">Material Marketplace</a>
-            <a href="sus-score.html" >Sustainability Score</a>
+            <a href="project-gallery.html">Project Gallery</a>
         </div>
     </header>
 
@@ -163,10 +143,19 @@
     </main>
 
     <script>
-       function toggleMenu() {
-            var menu = document.getElementById("menuDropdown");
+        function toggleMenu() {
+            const menu = document.getElementById("menuDropdown");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
+
+        // Close the menu if clicked outside
+        document.addEventListener("click", function(event) {
+            const menu = document.getElementById("menuDropdown");
+            const button = document.querySelector(".menu-button");
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
     </script>
 </body>
 </html>
